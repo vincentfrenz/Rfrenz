@@ -1,4 +1,4 @@
-# Hello, world!
+# Import Text data and convert to Martix
 #
 # This is an example function named 'hello'
 # which prints 'Hello, world!'.
@@ -13,6 +13,16 @@
 #   Check Package:             'Cmd + Shift + E'
 #   Test Package:              'Cmd + Shift + T'
 
+#' Get Data
+#'
+#' @param path Path to the directory where txt files are stored.
+#' @param save Default False. TRUE/FALSE  The option to save your matrix into an RDS. If set to TRUE you need to pass a path to "path_out" where your RDS will be stored.
+#' @param path_out The Path to a driectory where you want to store the RDS.
+#'
+#' @return
+#' @export
+#'
+#' @examples
 get_data <- function(path, save=FALSE , path_out) {
   filelist <- list.files(path, pattern = "*.txt")
   filelist <- mixedsort(filelist)
