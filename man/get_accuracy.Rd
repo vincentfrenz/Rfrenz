@@ -7,7 +7,13 @@
 get_accuracy(slice, criterion, acc = "pearson", criterion_type = "")
 }
 \arguments{
-\item{criterion_type}{}
+\item{slice}{A list of socio matricies that represent respondents.}
+
+\item{criterion}{A socio matrix that represnts the true network computed from all respondents}
+
+\item{acc}{The accuracy measure to be computed}
+
+\item{criterion_type}{The criterion type that has been used}
 }
 \value{
 A dataframe of respondents and there accuracy scores

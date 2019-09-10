@@ -1,25 +1,9 @@
-# Hello, world!
-#
-# This is an example function named 'hello'
-# which prints 'Hello, world!'.
-#
-# You can learn more about package authoring with RStudio at:
-#
-#   http://r-pkgs.had.co.nz/
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Build and Reload Package:  'Cmd + Shift + B'
-#   Check Package:             'Cmd + Shift + E'
-#   Test Package:              'Cmd + Shift + T'
-
-
 #' Get Accuracy of Respondents
 #'
-#' @param slice
-#' @param criterion
-#' @param acc
-#' @param criterion_type
+#' @param slice  A list of socio matricies that represent respondents.
+#' @param criterion A socio matrix that represnts the true network computed from all respondents
+#' @param acc The accuracy measure to be computed
+#' @param criterion_type The criterion type that has been used
 #'
 #' @return A dataframe of respondents and there accuracy scores
 #' @export

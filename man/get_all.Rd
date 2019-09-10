@@ -2,15 +2,22 @@
 % Please edit documentation in R/get_all.R
 \name{get_all}
 \alias{get_all}
-\title{Title}
+\title{Get accuracy from slices}
 \usage{
 get_all(slice, criterion = "RLAS", accuracy = "pearson")
 }
 \arguments{
-\item{accuracy}{}
+\item{slice}{A list of socio matricies that represent respondents.}
+
+\item{criterion}{A true netwrok of the socio matricies to be computed.}
+
+\item{accuracy}{An accuracy measure to be computed}
+}
+\value{
+Returns a list of 2 items. The first is the criterion network. The second is a dataframe containing an accuracy score for each respondent
 }
 \description{
-Title
+Get accuracy from slices
 }
 \examples{
 

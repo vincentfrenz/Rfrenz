@@ -1,10 +1,10 @@
-#' Title
+#' Get accuracy from slices
 #'
-#' @param slice
-#' @param criterion
-#' @param accuracy
+#' @param slice A list of socio matricies that represent respondents.
+#' @param criterion A true netwrok of the socio matricies to be computed.
+#' @param accuracy An accuracy measure to be computed
 #'
-#' @return
+#' @return Returns a list of 2 items. The first is the criterion network. The second is a dataframe containing an accuracy score for each respondent
 #' @export
 #' @importFrom Rfrenz get_accuracy
 #' @importFrom Rfrenz get_criterion
