@@ -24,59 +24,59 @@
 #' @import binda 
 #' @examples
 #' 
-get_criterion <- function(sociomatrix, criterion){
+get_criterion <- function(x, criterion){
   criterion_upper <- toupper(criterion)
   switch(criterion_upper, 
          "RLAS"={
            print("RLAS Criterion")
-           return(consensus(sociomatrix, mode = "diagraph", method="OR.row"))
+           return(consensus(x, mode = "diagraph", method="OR.row"))
          },
          "CLAS"={
            print("CLAS Criterion")
-           return(consensus(sociomatrix, mode = "diagraph", method="OR.col"))
+           return(consensus(x, mode = "diagraph", method="OR.col"))
          },
          "ILAS"={
            print("ILAS Criterion")
-           return(consensus(sociomatrix, method="LAS.intersection"))
+           return(consensus(x, method="LAS.intersection"))
          },
          "ULAS"={
            print("ULAS Criterion")
-           return(consensus(sociomatrix, method="LAS.union"))
+           return(consensus(x, method="LAS.union"))
          },
          "GA"={
            print("Global Aggregate Criterion")
-           dat <- as.sociomatrix.sna(sociomatrix) 
+           dat <- as.sociomatrix.sna(x) 
            out <- matrix(data = as.numeric(apply(dat, c(2,3), sum, na.rm = TRUE)), nrow = dim(dat)[2],ncol = dim(dat)[2])
            return(out)
          },
          "GAT"={
            print("Global Aggregate Threshold Criterion")
-           return(consensus(sociomatrix, method="central.graph"))
+           return(consensus(x, method="central.graph"))
          },
-         "GATV"={
-           print("Global Aggregate Threshold (VALUED) Criterion")
-           dat <- as.sociomatrix.sna(sociomatrix)  
+         "GAV"={
+           print("Global Aggregate valued Criterion")
+           dat <- as.sociomatrix.sna(x)  
            out <- matrix(data = as.numeric(apply(dat, c(2,3), mean, na.rm = TRUE)), nrow = dim(dat)[2],ncol = dim(dat)[2])
            return(out)
          },
          "SR"={
            print("Single Reweight Criterion")
-           return(dichotomize(consensus(sociomatrix, method="single.reweight"), 0.5))
+           return(dichotomize(consensus(x, method="single.reweight"), 0.5))
          },
          "IR"={
            print("Iterative Reweight Criterion")
-           return(consensus(sociomatrix, method="iterative.reweight", maxiter = 500))
+           return(consensus(x, method="iterative.reweight", maxiter = 500))
          },
          "RB"={
            print("Romney Batchelder Criterion")
-           y <- consensus(sociomatrix, method="romney.batchelder")
+           y <- consensus(x, method="romney.batchelder")
            x <- dichotomize(y, 0.5)
            return(x)
          },
          "PCA"={
            print("Principle Component Analysis (PCA) Criterion")
            scale_f<-function(x){(x-min(x))/(max(x)-min(x))}
-           return(dichotomize(scale_f(consensus(sociomatrix, method="PCA.reweight")), 0.5))
+           return(dichotomize(scale_f(consensus(x, method="PCA.reweight")), 0.5))
          },
          "BAY"={
            print("Bayesian Criterion")
@@ -86,7 +86,7 @@ get_criterion <- function(sociomatrix, criterion){
              colnames(d) <- as.vector(x$anames)
              unname(as.sociomatrix.sna(d))
            }
-           return(dichotomize(bay_output(bbnam(sociomatrix)), 0.5))
+           return(dichotomize(bay_output(bbnam(x)), 0.5))
          }
   )
 }
