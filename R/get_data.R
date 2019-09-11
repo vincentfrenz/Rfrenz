@@ -21,7 +21,8 @@
 #'
 #' @return
 #' @export
-#'
+#' @import sna
+#' @import gtools
 #' @examples
 get_data <- function(path, save=FALSE , path_out) {
   filelist <- list.files(path, pattern = "*.txt")
@@ -34,7 +35,8 @@ get_data <- function(path, save=FALSE , path_out) {
     slice_list[[i]] <- data.matrix(read.csv(file_path, row.names = 1))
   }
   mat_slice_list <- lapply(slice_list, matrix , nrow = length(slice_list), ncol = length(slice_list))
+  socio_mat <- lapply(mat_slice_list, as.sociomatrix.sna)
   if(save == TRUE){
-    saveRDS(mat_slice_list,path_out)
+    saveRDS(socio_mat,path_out)
   }
 }
