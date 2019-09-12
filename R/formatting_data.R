@@ -1,16 +1,32 @@
-#' Remove Missing Slices 
+#' Remove/Replace Missing Slices 
 #'
 #' @param x 
 #' @param option 
 #'
 #' @return
 #' @export
-#'
+#' @import expss
+#' @import rlist
+#' @import network
+#' @import igraph
+#' @import intergraph
+#' @import matrixcalc
 #' @examples
 formatting_data <- function(x, option="remove") {
+  if(is.igraph(x[[1]])) {
+    warning('Package can not remove missing values from IGRPAH/TidyGraph data! (Data could be skewed) \n')
+    x <- lapply(x, asNetwork)
+  }
+  if(is.network(x[[1]])) {
+    warning('Data converted to a Sociomatrix! \n')
+    x <- lapply(x, as.sociomatrix.sna)
+  }
+  if(!is.square.matrix(x[[1]])) {
+    stop("Matrix needs to be square!")
+  }
   missing_index <- c()
-  for (i in 1:length(fr_pharma_sm)) {
-    if (anyNA(fr_pharma_sm[i], recursive = TRUE)) {
+  for (i in 1:length(x)) {
+    if (anyNA(x[i], recursive = TRUE)) {
       missing_index <- append(missing_index, i)
       missing_index <- as.numeric(missing_index)
     }
