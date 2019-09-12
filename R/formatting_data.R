@@ -7,7 +7,7 @@
 #' @export
 #'
 #' @examples
-remove_missing <- function(x, option="remove") {
+formatting_data <- function(x, option="remove") {
   missing_index <- c()
   for (i in 1:length(fr_pharma_sm)) {
     if (anyNA(fr_pharma_sm[i], recursive = TRUE)) {
