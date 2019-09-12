@@ -6,8 +6,6 @@
 #'
 #' @return Returns a list of 2 items. The first is the criterion network. The second is a dataframe containing an accuracy score for each respondent
 #' @export
-#' @importFrom Rfrenz get_accuracy
-#' @importFrom Rfrenz get_criterion
 #' @examples
 #'
 get_all <- function(slice, criterion="RLAS",accuracy="pearson"){

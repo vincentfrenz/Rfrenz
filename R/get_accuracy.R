@@ -9,7 +9,7 @@
 #' @param acc The accuracy measure to be computed
 #' @param criterion_type The criterion type that has been used
 #'
-#' @return A dataframe of respondents and there accuracy scores
+#' @return A dataframe of respondents and there accuracy scores \insertCite{Hanneman2014a}{Rfrenz}
 #' @export
 #'
 #' @import network
@@ -35,8 +35,12 @@
 #' @import rebus
 #' @import asnipe
 #' @import psych
+#' @importFrom Rdpack reprompt
 #'
 #' @examples
+#'
+#' @references
+#' \insertRef{Hanneman2014a}{Rfrenz}
 get_accuracy <- function(sociomatrix, criterion, acc="pearson", criterion_type=NA ){
   if(!is.na(criterion_type)){
     criterion_type <- tolower(criterion_type)

@@ -4,12 +4,12 @@
 \alias{get_criterion}
 \title{Get Criterion networks from all perceptions}
 \usage{
-get_criterion(sociomatrix, criterion)
+get_criterion(x, criterion)
 }
 \arguments{
-\item{sociomatrix}{}
-
 \item{criterion}{}
+
+\item{sociomatrix}{}
 }
 \description{
 Get Criterion networks from all perceptions

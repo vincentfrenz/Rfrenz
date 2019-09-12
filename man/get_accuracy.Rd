@@ -4,10 +4,10 @@
 \alias{get_accuracy}
 \title{Get Accuracy of Respondents}
 \usage{
-get_accuracy(slice, criterion, acc = "pearson", criterion_type = NA)
+get_accuracy(sociomatrix, criterion, acc = "pearson", criterion_type = NA)
 }
 \arguments{
-\item{slice}{A list of socio matricies that represent respondents.}
+\item{sociomatrix}{A list of socio matrices that represent respondents.}
 
 \item{criterion}{A socio matrix that represnts the true network computed from all respondents}
 
@@ -16,8 +16,14 @@ get_accuracy(slice, criterion, acc = "pearson", criterion_type = NA)
 \item{criterion_type}{The criterion type that has been used}
 }
 \value{
-A dataframe of respondents and there accuracy scores
+A dataframe of respondents and there accuracy scores \insertCite{Hanneman2014a}{Rfrenz}
 }
 \description{
 The purpose of this function is to get the accuracy scores for each respondent in a social network based on their perception of the network. This is done by checking the similarity between their perception and a criterion network (i.e., a network that best represents the relations in a network).
+}
+\examples{
+
+}
+\references{
+\insertRef{Hanneman2014a}{Rfrenz}
 }
