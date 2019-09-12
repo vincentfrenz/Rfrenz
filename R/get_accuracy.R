@@ -65,33 +65,39 @@ get_accuracy <- function(sociomatrix, criterion, acc="pearson", criterion_type=N
   temp_df<-data.frame()
   switch(acc,
          "pearson"={
+           print("Pearson Correlation")
            temp_df<-data.frame(map_df(1:length(sociomatrix),function(x){
              score<-gcor(sociomatrix[[x]],criterion)
              data.frame(Respondent=x, Score=score,acc,criterion_type)
            }))
          },
          "spearman"={
+           print("Spearman Correlation")
            temp_df<-map_df(1:length(sociomatrix),function(x){
              score<-cor.test(sociomatrix[[x]],criterion, method="spearman")
              data.frame(Respondent = x,Score = score[['estimate']][[1]],Accuracy = acc,criterion_type)
            })
          },
          "jaccard"={
+           print("jaccard Correlation")
            temp_df<-map_df(1:length(sociomatrix),function(x){
              score<-jaccard::jaccard(sociomatrix[[x]],criterion)
              data.frame(Respondent = x,Score = score,Accuracy = acc,criterion_type)
            })
          },"kendall"={
+           print("Kendall Rank Correlation")
            temp_df<-map_df(1:length(sociomatrix),function(x){
              score<-Kendall(sociomatrix[[x]],criterion)
              data.frame(Respondent = x,Score = score[[1]][[1]],Accuracy = acc, criterion_type)
            })
          },"s14"={
+           print("S14 Similarity Index")
            temp_df<-map_df(1:length(sociomatrix),function(x){
              score<-s14(sociomatrix[[x]],criterion)
              data.frame(Respondent = x,Score = score,Accuracy = acc, criterion_type)
            })
          },"mrqap"={
+           print("MRQAP with Double-Semi-Partialing (DSP)")
            temp_df<-map_df(1:length(sociomatrix),function(x){
              if(sum(x) != 0){
                score<-mrqap.dsp(criterion~sociomatrix[[x]],directed = "directed" )
@@ -119,11 +125,13 @@ get_accuracy <- function(sociomatrix, criterion, acc="pearson", criterion_type=N
 
            })
          },"gscor"={
+           print("Structural Correlation")
            temp_df<-map_df(1:length(sociomatrix),function(x){
              score<-gscor(sociomatrix[[x]],criterion)
              data.frame(Respondent = x,Score = score,Accuracy = acc, criterion_type)
            })
          },"CohenK"={
+           print("Cohens Kappa Correlation")
            kap <- list()
            temp_df<-map_df(1:length(sociomatrix),function(x){
              i<-map_dbl(sociomatrix[[x]], function(x){
@@ -138,6 +146,7 @@ get_accuracy <- function(sociomatrix, criterion, acc="pearson", criterion_type=N
 
            })
          },"local"={
+           print("Local Accuracy")
            if (criterion_type == "rlas"){
            temp_df<-map_df(1:length(sociomatrix),function(x){
              #loops throught the number of columns in the criterion netowrk
@@ -160,7 +169,7 @@ get_accuracy <- function(sociomatrix, criterion, acc="pearson", criterion_type=N
            )}else{
              print("Not an RLAS criterion")
            }},'dyadic'={
-
+             print("Dyadic Accuracy")
              temp_df<-map_df(1:length(sociomatrix),function(i){
                wrong <- c()
                totalRelation <- (length(sociomatrix)*length(sociomatrix)-length(sociomatrix))
@@ -191,6 +200,7 @@ get_accuracy <- function(sociomatrix, criterion, acc="pearson", criterion_type=N
              })
 
            },'triadic pearson'={
+             print("triadic pearson")
              sociomatrix_tiad <- lapply(sociomatrix, triad.census, mode = c("digraph"))
              # make clear that we are doing triad consensus on triads in documentation
              crit_tiad <- triad.census(criterion, mode = c("digraph"))
@@ -201,6 +211,7 @@ get_accuracy <- function(sociomatrix, criterion, acc="pearson", criterion_type=N
              })
 
            },'triadic spearman'={
+             print("triadic spearman")
              sociomatrix_tiad <- lapply(sociomatrix, triad.census, mode = c("digraph"))
              crit_tiad <- triad.census(criterion, mode = c("digraph"))
              temp_df <- map_df(1:length(sociomatrix_tiad),function(i){
@@ -210,6 +221,7 @@ get_accuracy <- function(sociomatrix, criterion, acc="pearson", criterion_type=N
              })
              return(temp_df)
            },'triadic distance'={
+             print("triadic distance")
              sociomatrix_tiad <- lapply(sociomatrix, triad.census, mode = c("digraph"))
              crit_tiad <- triad.census(criterion, mode = c("digraph"))
              temp_df <- map_df(1:length(sociomatrix_tiad),function(i){
