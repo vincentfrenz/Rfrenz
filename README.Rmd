@@ -71,6 +71,7 @@ rfrenz_acc(list_respondent, criterion = "ILAS", accuracy="s14")
 ```
 #### Values
 The `rfrenz_acc` function returns a list of 2 items. The first is the criterion network. The second is a dataframe containing an accuracy score for each respondent
+
 ## The Data 
 
 ### Get Data
@@ -95,48 +96,48 @@ formatting_data(list_respondent, option = "replace")
 
 Criterion (also called true or actual) networks are representative of the notion of shared or common perceptions of social structures from all observers within a network. Various different algorithms exist to derive these actual networks namely: Local Aggregate Structures (LAS), Consensus Structures and Expert Structures [@Krackhardt1987a][@Cornelissen2019].
 
-Local Aggregate Structures (LAS)
+#### Local Aggregate Structures (LAS)
 
 LAS is suitable in a context to generate which suggests that only the individuals directly involved in the relation determine the existence of the relation.
 
-RLAS: Row-Dominated LAS
+##### RLAS: Row-Dominated LAS
 An RLAS criterion is created by determining whether or not the perceiver observes the relationship to exist, even though the receiver does not always necessarily deem it to exist [@Krackhardt1987a]. Thus, the sender of the relationship will be assumed as correct. Function used: consensus from the SNA package [@Butts2016].
 
-CLAS: Column-Dominated LAS.
+##### CLAS: Column-Dominated LAS.
 CLAS is created by determining whether or not the receiver of the relation perceives the relation to exist. Thus, the receiver of the relationship will be assumed as correct. Function used: consensus from the SNA package [@Butts2016].
 
-ILAS: Intersection LAS
+##### ILAS: Intersection LAS
 ILAS criterion networks are created by determining whether or not both respondents perceive the tie to exist. Thus, both respondents have to agree on the relationship in order for it to exist [@Krackhardt1987a]. Function used: consensus from the SNA package [@Butts2016].
 
-ULAS: Union LAS
+##### ULAS: Union LAS
 ULAS defines relations to exist if at least one of the respondents involved in the relation perceives it to exist [@Krackhardt1987a]. Function used: consensus from the SNA package [@Butts2016].
 
-Consensus Structures
+#### Consensus Structures
 
-GA: Global Aggregate
+##### GA: Global Aggregate
 Using Global Aggregate to generate actual networks is not so much focused on who perceived a specific relations, but rather how many perceived that relation. This is done by taking the sum of relationships that exists for each observer.
 
-GAT: Global Aggregate with a threshold
+##### GAT: Global Aggregate with a threshold
 The threshold is set to measure the proportion of members that perceive a relation between the sender and receiver of the relationship. This corresponds to a “median response” notion of creating an actual network. Function used: consensus from the SNA package [@Butts2016].
 
-GAV: Global Aggregate (valued)
+##### GAV: Global Aggregate (valued)
 To gain a clearer understanding of the global perception of a relation, one could make use of proportions rather than showing only the presence or absence of a perceived relation (i.e. the GAT method). Thus, this method shows which percentage of observers perceived the relationship.
 
-Expert Structures
+#### Expert Structures
 
-SR: Single Reweight
+##### SR: Single Reweight
 The reweight method takes consensus structure to create an initial criterion network. The reweight method is then applied to give a more accurate representation of the perceptions in the network. This is done is by performing consensus structure reduction on the data again but with different perceivers weighted according to their accuracy in perceiving relations in original criterion network. The single reweight method is when there is only one additional reduction done using the reweighted nodes. Function used: consensus from the SNA package [@Butts2016].
 
-IR: Iterative Reweight
+##### IR: Iterative Reweight
 Similar to Single Reweight except this method applies multiple reductions to weigh perceivers differently in each iteration. This can be useful when there is a disconnect between different perceptions which results in relations which are not accurate or don't exist. IR tries to find the most accurate perceivers in the network in order to give their perceptions of relations more validity when determining the criterion network. Function used: consensus from the SNA package [@Butts2016].
 
-RB: Romney Batchelder
+##### RB: Romney Batchelder
 Similar to Single Reweight method but with an exception to the motivation. Romney Batchelder theory's motivation lies in the measurement of shared beliefs in a group. The criterion is built on the “cultural competency” weighted perceptions. Measuring “cultural competency” of respondents is done by determining the correlation between the responses of each individual and the aggregated responses of the group.
 
-PCA: Principal Component Analysis.
+##### PCA: Principal Component Analysis.
 The PCA method for generating actual networks uses the first component of a network. PCA extracts shared themes among all the respondents within a network [@Butts2016]. PCA reduces the dimensions and relationships considered a data set while still maintaining the most important information within it. Function used: consensus from the SNA package [@Butts2016].
 
-BAY: Bayesian
+##### BAY: Bayesian
 Network accuracy model method can be used to generate the criterion network given the probability of false positives and false negatives. For more information see Bayesian. Function used: consensus from the SNA package [@Butts2016].
 
 ### Get Criterion
@@ -150,6 +151,7 @@ This function generates a criterion (true) network given all the perceptions per
 #### Usage:
 ```{r Get Criterion}
 crit <- get_criterion(list_respondent, criterion='RLAS')
+crit
 
 ```
 
@@ -210,7 +212,9 @@ The purpose of this function is to get the accuracy scores for each respondent i
 
 ```{r Get Accuracy}
 
-get_accuracy(list_respondent, crit, acc = "pearson", criterion_type = "RLAS")
+acc_df<- get_accuracy(list_respondent, crit, acc = "pearson", criterion_type = "RLAS")
+
+acc_df
 
 ```
 
@@ -221,8 +225,16 @@ A dataframe of respondents and there accuracy scores.
 ## Plotting
 
 ### Rfrenz plot
-```{r Rfrenz plot}
+This function can be used to quickly plot a summary of the get_crit() and get_accuracy() functions in one place.
+#### Arguments
+`crit` - criterion network returned after get_criterion() is run. the crit is used to plot a criterion network.
 
+`accuracy_df` - accuracy score dataframe that is return after get_accruacy() from Rfrenze is run. the accruacy_df is used to plot a boxplot summarising the data
+
+`criterion` - default="RLAS". the criterion name of the criterion being past in crit. is used as a titile for the graph.
+
+```{r Rfrenz plot}
+frenz_plot(crit, acc_df,criterion="RLAS")
 ```
 
 ## Conclusion
