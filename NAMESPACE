@@ -2,6 +2,7 @@
 
 export(formatting_data)
 export(frenz_plot)
+export(frenz_stats)
 export(get_accuracy)
 export(get_criterion)
 export(get_data)
