@@ -10,7 +10,7 @@
 #'
 #' @param crit criterion network returned after \link[Rfrenz:get_criterion]{get_criterion()} is run. The crit is used to plot a criterion network.
 #' @param criterion Default="Title Here". The title of the criterionnetwork being plotted.
-#' @param accuracy_df Default = FALSE. If you have an accuracy dataframe from the \link[Rfrenz:sget_accuracy]{get_accuracy()} function you can past it to the parameter here. A boxplot is plotted of for the various accuracy scores.
+#' @param accuracy_df Default = FALSE. If you have an accuracy dataframe from the \link[Rfrenz:get_accuracy]{get_accuracy()} function you can past it to the parameter here. A boxplot is plotted of for the various accuracy scores.
 #'
 #'
 #' @import igraph
