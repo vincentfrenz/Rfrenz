@@ -2,17 +2,18 @@
 % Please edit documentation in R/frenz_plot.R
 \name{frenz_plot}
 \alias{frenz_plot}
-\title{Quickly plotting a criterion network and the respondents accuracy.}
+\title{Quickly plotting a criterion network and optionally the respondents accuracy-scores.}
 \usage{
-frenz_plot(crit, accuracy_df,criterion="RLAS")
+frenz_plot(crit,criterion="Title Here",accuracy_df)
 }
 \arguments{
-\item{crit}{criterion network returned after \link[Rfrenz:get_criterion]{get_criterion()} is run. the crit is used to plot a criterion network.}
+\item{crit}{criterion network returned after \link[Rfrenz:get_criterion]{get_criterion()} is run. The crit is used to plot a criterion network.}
 
-\item{accuracy_df}{accuracy score dataframe that is return after \link[Rfrenz:sget_accuracy]{get_accuracy()}from Rfrenze is run. The accruacy_df is used to plot a boxplot summarising the data}
+\item{criterion}{Default="Title Here". The title of the criterionnetwork being plotted.}
 
-\item{criterion}{default="RLAS". the criterion name of the criterion being past in crit. is used as a titile for the graph.}
+\item{accuracy_df}{Default = FALSE. If you have an accuracy dataframe from the \link[Rfrenz:sget_accuracy]{get_accuracy()} function you can past it to the parameter here. A boxplot is plotted of for the various accuracy scores.}
 }
 \description{
 This function can be used to quickly plot a summary of the \link[Rfrenz:get_criterion]{get_criterion()}and \link[Rfrenz:get_accuracy]{get_accuracy()}functions in one place.
+The function allows you to plot the criterion alone or with an accuracy-score summary in the form of a boxplot. If you want to plot the criterion alone , you only have to pass a criterion-matrix to the function.
 }
