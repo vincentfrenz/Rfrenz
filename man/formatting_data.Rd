@@ -22,9 +22,11 @@ removing missing slices, replacing missing slices with central graph or replacin
 Missing data can affect the formation of the actual networks. In order to deal with this,
 missing perceptions can be set to a blank perception (0),
 or replaced with an estimate value, or the missing respondents can be omitted.
+\describe{
 \item{"remove"}{This option will omit the missing values completely. Omitting the missing respondents results in effectively sampling the original data \insertCite{Borgatti2006}{Rfrenz}.}
 \item{"replace"}{This option will replace the missing values of the obeserver with the central graph consensus of the network.}
 \item{"zero"}{This option will replace all the missing values of the obeserver with the value 0. This however, can result in inaccurate outcomes \insertCite{Krackhardt2002}{Rfrenz}.}
+}
 }
 \references{
 \insertAllCited{}

@@ -171,6 +171,7 @@ This function generates a criterion (true) network given all the perceptions per
 
 #### Arguments:
 `dat` - A socio-matrix containing all of the perceptions of a network
+
 `criterion` - The criterion network needed to be generated (“RLAS”, “CLAS”, “ILAS”, “ULAS”, “GA”, “GAT”, “GAV”, “SR”, “IR”, “PCA”, “RB”, “BAY”)
 
 
@@ -231,8 +232,11 @@ The purpose of this function is to get the accuracy scores for each respondent i
 
 #### Arguments
 `dat` - A list of socio matrices that represent respondents.
+
 `criterion` - A sociomatrix that represents the criterion network (i.e., a network that best represents the relations in a network) that is computed from all respondents.
+
 `acc` - The name of the accuracy measure to be computed. Options: “pearson”, “spearman”, “jaccard”, “kendall”, “s14”, “mrqap”, “gscor”, “CohenK”, “local”, “triadic pearson”, “triadic spearman”, “triadic distance”.
+
 `criterion_type` - The name of the criterion that has been used.
 
 ```{r Get Accuracy, warning=FALSE}
@@ -250,11 +254,11 @@ A dataframe of respondents and there accuracy scores.
 ## Plotting
 
 ### Rfrenz plot
-This function can be used to quickly plot a summary of the get_crit() and get_accuracy() functions in one place.
+This function can be used to quickly plot a summary of the `get_criterion()` and `get_accuracy()` functions in one place. The function allows you to plot the criterion alone or with an accuracy-score summary in the form of a boxplot. If you want to plot the criterion alone , you only have to pass a criterion-matrix to the function.
 #### Arguments
 `crit` - criterion network returned after get_criterion() is run. the crit is used to plot a criterion network.
 
-`accuracy_df` - accuracy score dataframe that is return after get_accruacy() from Rfrenze is run. the accruacy_df is used to plot a boxplot summarising the data
+`accuracy_df` -Default = FALSE. If you have an accuracy dataframe from the `get_accuracy()` function you can past it to the parameter here. A boxplot is plotted of for the various accuracy scores.
 
 `criterion` - default="RLAS". the criterion name of the criterion being past in crit. is used as a titile for the graph.
 
@@ -267,6 +271,7 @@ frenz_plot(crit, acc_df,criterion="RLAS")
 #### Values
 
 The Plot function returns a network graph of the criterion network that is passed into it and a box and whisker graph showing summary statistics of the data.
+
 
 ## Conclusion
 
