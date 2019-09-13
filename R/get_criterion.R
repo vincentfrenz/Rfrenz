@@ -1,8 +1,8 @@
 #' Get Criterion networks from all perceptions
 #'
-#' @param dat A socio-matrix containing all of the perceptions of a network
+#' @param dat A List of socio-matracies containing all of the perceptions of a network
 #' @param criterion The criterion network needed to be generated (“RLAS”, “CLAS”, “ILAS”, “ULAS”, “GA”, “GAT”, “GAV”, “SR”, “IR”, “PCA”, “RB”, “BAY”)
-
+#'
 #'
 #' @description
 #' This function generates a criterion (true) network given all the perceptions perceived in a  network. Several algorithms for determining criterion networks are available to best suit the context of the network.
