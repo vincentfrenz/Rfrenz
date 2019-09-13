@@ -1,29 +1,16 @@
-# Import Text data and convert to Martix
-#
-# This is an example function named 'hello'
-# which prints 'Hello, world!'.
-#
-# You can learn more about package authoring with RStudio at:
-#
-#   http://r-pkgs.had.co.nz/
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Build and Reload Package:  'Cmd + Shift + B'
-#   Check Package:             'Cmd + Shift + E'
-#   Test Package:              'Cmd + Shift + T'
-
-#' Get Data
+#' Import matrix stored as txt into R and convert to Martix
+#'
+#'@title Get Data
 #'
 #' @param path Path to the directory where txt files are stored.
-#' @param save Default False. TRUE/FALSE  The option to save your matrix into an RDS. If set to TRUE you need to pass a path to "path_out" where your RDS will be stored.
-#' @param path_out The Path to a driectory where you want to store the RDS.
+#' @param save Default FALSE. If parameter is set to equal TRUE, the matrix will be saved into an `.rds`. If set to TRUE you need to pass a path to "path_out" where your `.rds` will be stored.
+#' @param path_out The Path to a driectory where you want to store the `.rds` .
 #'
-#' @return
-#' @export
 #' @import sna
 #' @import gtools
-#' @examples
+#' @examples get_data("Documents/folder/", save=TRUE , "Documents/folder/data_out/")
+#'
+#' @export
 get_data <- function(path, save=FALSE , path_out) {
   filelist <- list.files(path, pattern = "*.txt")
   filelist <- mixedsort(filelist)

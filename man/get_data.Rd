@@ -9,10 +9,14 @@ get_data(path, save = FALSE, path_out)
 \arguments{
 \item{path}{Path to the directory where txt files are stored.}
 
-\item{save}{Default False. TRUE/FALSE  The option to save your matrix into an RDS. If set to TRUE you need to pass a path to "path_out" where your RDS will be stored.}
+\item{save}{Default FALSE. If parameter is set to equal TRUE, the matrix will be saved into an `.rds`. If set to TRUE you need to pass a path to "path_out" where your `.rds` will be stored.}
 
-\item{path_out}{The Path to a driectory where you want to store the RDS.}
+\item{path_out}{The Path to a driectory where you want to store the `.rds` .}
 }
 \description{
-Get Data
+Import matrix stored as txt into R and convert to Martix
+}
+\examples{
+get_data("Documents/folder/", save=TRUE , "Documents/folder/data_out/")
+
 }
