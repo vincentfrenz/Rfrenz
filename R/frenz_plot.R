@@ -3,7 +3,6 @@
 #' 
 #' @description
 #'function used to quickly plot a summary of the get_crit() and get_accuracy() functions in one place.
- criterion default="RLAS". The criterion name of the criterion being past in crit. is used as a titile for the graph
 
 #' @usage
 #' frenz_plot <- function(crit, accuracy_df,criterion="RLAS")
