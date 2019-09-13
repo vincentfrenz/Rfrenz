@@ -36,6 +36,7 @@ get_data <- function(path, save=FALSE , path_out) {
   }
   mat_slice_list <- lapply(slice_list, matrix , nrow = length(slice_list), ncol = length(slice_list))
   socio_mat <- lapply(mat_slice_list, as.sociomatrix.sna)
+  return(socio_mat)
   if(save == TRUE){
     saveRDS(socio_mat,path_out)
   }
