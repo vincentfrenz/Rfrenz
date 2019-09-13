@@ -2,17 +2,17 @@
 % Please edit documentation in R/frenz_plot.R
 \name{frenz_plot}
 \alias{frenz_plot}
-\title{Frenz Plot}
+\title{Quickly plotting a criterion network and the respondents accuracy.}
 \usage{
-frenz_plot <- function(crit, accuracy_df,criterion="RLAS")
+frenz_plot(crit, accuracy_df,criterion="RLAS")
 }
 \arguments{
-\item{crit}{criterion network returned after get_criterion() is run. the crit is used to plot a criterion network.}
+\item{crit}{criterion network returned after \link[Rfrenz::get_criterion()]{get_criterion()} is run. the crit is used to plot a criterion network.}
 
-\item{accuracy_df}{accuracy score dataframe that is return after get_accruacy() from Rfrenze is run. the accruacy_df is used to plot a boxplot summarising the data}
+\item{accuracy_df}{accuracy score dataframe that is return after \link[Rfrenz::get_accuracy()]{get_accuracy()}from Rfrenze is run. The accruacy_df is used to plot a boxplot summarising the data}
 
 \item{criterion}{default="RLAS". the criterion name of the criterion being past in crit. is used as a titile for the graph.}
 }
 \description{
-function used to quickly plot a summary of the get_crit() and get_accuracy() functions in one place.
+This function can be used to quickly plot a summary of the \link[Rfrenz::get_criterion()]{get_criterion()}and \link[Rfrenz::get_accuracy()]{get_accuracy()}functions in one place.
 }
