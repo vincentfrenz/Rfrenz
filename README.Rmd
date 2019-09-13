@@ -19,11 +19,13 @@ install.packages('devtools')
 install.packages('githubinstall')
 ```
 
+The Rfrenz package can then be loaded using the `library` function.
 ```{r}
 library('Rfrenz')
 ```
 
 ### Generating Test Data
+The data generated here is used in the exampls below.
 ```{r generate data}
 
 r1 <- matrix(c(0,1,0,1,0,
@@ -58,7 +60,7 @@ list_respondent <- list(r1,r2,r3,r4,r5)
 
 
 ## The Rfrenz function
-This function generates a criterion (true) network given all the perceptions perceived in a network. The criterion network is then compared to all perceptions in order to determine th similarity between a respondent and thier perception of the network.
+This function generates a criterion (true) network given all the perceptions perceived in a network. The criterion network is then compared to all perceptions in order to determine the similarity between a respondent and thier perception of the network.
 
 #### Arguments 
 `dat` - A list of socio matricies that represent respondents.
@@ -90,6 +92,12 @@ formatting_data(list_respondent, option = "replace")
 ```
 
 ### Mock Data
+
+There are two main public examples of CSS data that is often used for dementration. These two datasets have been loaded into the R enviroment when the Rfrenz package is called. 
+
+```{r}
+
+```
 
 
 ## Criterion
@@ -148,7 +156,7 @@ This function generates a criterion (true) network given all the perceptions per
 `dat` - A socio-matrix containing all of the perceptions of a network
 `criterion` - The criterion network needed to be generated (“RLAS”, “CLAS”, “ILAS”, “ULAS”, “GA”, “GAT”, “GAV”, “SR”, “IR”, “PCA”, “RB”, “BAY”)
 
-#### Usage:
+
 ```{r Get Criterion}
 crit <- get_criterion(list_respondent, criterion='RLAS')
 crit
@@ -234,8 +242,14 @@ This function can be used to quickly plot a summary of the get_crit() and get_ac
 `criterion` - default="RLAS". the criterion name of the criterion being past in crit. is used as a titile for the graph.
 
 ```{r Rfrenz plot}
+
 frenz_plot(crit, acc_df,criterion="RLAS")
+
 ```
+
+#### Values
+
+The Plot function returns a network graph of the criterion network that is passed into it and a box and whisker graph showing summary statistics of the data.
 
 ## Conclusion
 

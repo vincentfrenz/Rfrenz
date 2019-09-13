@@ -2,15 +2,33 @@
 % Please edit documentation in R/formatting_data.R
 \name{formatting_data}
 \alias{formatting_data}
-\title{Remove/Replace Missing Slices}
+\title{Remove/Replace Missing (NA) Slices}
 \usage{
 formatting_data(dat, option = "remove")
 }
 \arguments{
-\item{dat}{}
+\item{dat}{A List of socio-matracies containing all of the perceptions of a network}
 
-\item{option}{}
+\item{option}{Opstion whether to remove or replace missing values ("remove", "replace", "zero")}
+}
+\value{
+A list of socio-matracies with the removed/replaced slices within the list
 }
 \description{
-Remove/Replace Missing Slices
+This function removes any missing perceptions (slices) from a list of socio-matracies. Three different options exist:
+removing missing slices, replacing missing slices with central graph or replacing missing values with 0.
+}
+\details{
+Missing data can affect the formation of the actual networks. In order to deal with this,
+missing perceptions can be set to a blank perception (0),
+or replaced with an estimate value, or the missing respondents can be omitted.
+\item{"remove"}{This option will omit the missing values completely. Omitting the missing respondents results in effectively sampling the original data \insertCite{Borgatti2006}{Rfrenz}.}
+\item{"replace"}{This option will replace the missing values of the obeserver with the central graph consensus of the network.}
+\item{"zero"}{This option will replace all the missing values of the obeserver with the value 0. This however, can result in inaccurate outcomes \insertCite{Krackhardt2002}{Rfrenz}.}
+}
+\references{
+\insertAllCited{}
+}
+\author{
+Christiaan van Rensburg, Alex Cawood, Marette Theron
 }
