@@ -1,13 +1,13 @@
 #' Get Criterion networks from all perceptions
 #'
-#' @param x A socio-matrix containing all of the perceptions of a network
+#' @param dat A socio-matrix containing all of the perceptions of a network
 #' @param criterion The criterion network needed to be generated (“RLAS”, “CLAS”, “ILAS”, “ULAS”, “GA”, “GAT”, “GAV”, “SR”, “IR”, “PCA”, “RB”, “BAY”)
 
 #'
 #' @description
 #' This function generates a criterion (true) network given all the perceptions perceived in a  network. Several algorithms for determining criterion networks are available to best suit the context of the network.
 #'@usage
-#'get_criterion(x, criterion=”RLAS”)
+#'get_criterion(dat, criterion=”RLAS”)
 #'
 #' @details
 #' Criterion (also called true or actual) networks are representative of the notion of shared or common perceptions of social structures from all observers within a network. Various different algorithms exist to derive these actual networks namely: Local Aggregate Structures (LAS), Consensus Structures and Expert Structures \insertCite{Krackhardt1987a}{Rfrenz}\insertCite{Cornelissen2019}{Rfrenz}.
