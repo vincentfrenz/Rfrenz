@@ -4,10 +4,10 @@
 \alias{get_criterion}
 \title{Get Criterion networks from all perceptions}
 \usage{
-get_criterion(x, criterion=”RLAS”)
+get_criterion(dat, criterion=”RLAS”)
 }
 \arguments{
-\item{x}{A socio-matrix containing all of the perceptions of a network}
+\item{dat}{A socio-matrix containing all of the perceptions of a network}
 
 \item{criterion}{The criterion network needed to be generated (“RLAS”, “CLAS”, “ILAS”, “ULAS”, “GA”, “GAT”, “GAV”, “SR”, “IR”, “PCA”, “RB”, “BAY”)}
 }

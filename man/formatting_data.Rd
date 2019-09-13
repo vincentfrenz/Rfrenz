@@ -4,10 +4,10 @@
 \alias{formatting_data}
 \title{Remove/Replace Missing Slices}
 \usage{
-formatting_data(x, option = "remove")
+formatting_data(dat, option = "remove")
 }
 \arguments{
-\item{x}{}
+\item{dat}{}
 
 \item{option}{}
 }

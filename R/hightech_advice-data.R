@@ -1,6 +1,6 @@
 #' High Tech Managers data on Advice relations
 #'
-#' These are data collected from the managers of a high-tec company. 
+#' These are data collected from the managers of a high-tec company.
 #' The company manufactured high-tech equipment on the west coast of the United States and had just over 100 employees with 21 managers.
 #' Each manager was asked to whom do you go to for advice and who is your friend.
 #'
@@ -18,4 +18,4 @@
 #' data(hightech_advice)
 #' slice_6 <- hightech_advice[[6]]
 #' slice_6
-"hightech_advice"
+NULL
