@@ -52,7 +52,7 @@
 #' @references
 #' \insertAllCited{}
 #'
-get_criterion <- function(dat, criterion){
+get_criterion <- function(dat, criterion="RLAS"){
   criterion_upper <- toupper(criterion)
   dat <- formatting_data(dat)
   switch(criterion_upper,
