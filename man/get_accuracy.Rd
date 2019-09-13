@@ -4,10 +4,10 @@
 \alias{get_accuracy}
 \title{Get Accuracy of Respondents}
 \usage{
-get_accuracy(sociomatrix, criterion, acc = "pearson", criterion_type = NA)
+get_accuracy(dat, criterion, acc = "pearson", criterion_type = NA)
 }
 \arguments{
-\item{sociomatrix}{A list of socio matrices that represent respondents.}
+\item{dat}{A list of socio matrices that represent respondents.}
 
 \item{criterion}{A sociomatrix that represents the criterion network (i.e., a network that best represents the relations in a network) that is computed from all respondents.}
 

@@ -1,0 +1,52 @@
+---
+title: "README"
+author: "Christiaan van Rensburg, Alexander Cawood, Marette Theron"
+date: "9/13/2019"
+output: rmarkdown::github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Introduction
+
+## Install Instructions
+
+## The Data 
+
+### Get Data
+```{r Get Data}
+
+```
+
+### Formating Data
+```{r Formatting Data}
+
+```
+
+## Criterion
+
+### Get Criterion
+
+```{r Get Criterion}
+
+```
+
+
+## Accuracy 
+
+### Get Accuracy
+```{r Get Accuracy}
+
+```
+
+## Plotting
+
+### Rfrenz plot
+```{r Rfrenz plot}
+
+```
+
+## Conclusion
+
+

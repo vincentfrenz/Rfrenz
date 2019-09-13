@@ -2,7 +2,7 @@
 % Please edit documentation in R/formatting_data.R
 \name{formatting_data}
 \alias{formatting_data}
-\title{Remove Missing Slices}
+\title{Remove/Replace Missing Slices}
 \usage{
 formatting_data(x, option = "remove")
 }
@@ -12,5 +12,5 @@ formatting_data(x, option = "remove")
 \item{option}{}
 }
 \description{
-Remove Missing Slices
+Remove/Replace Missing Slices
 }
