@@ -21,6 +21,7 @@
 #' @import ggraph
 #' @import gridExtra
 #'
+#'@export
 frenz_plot <- function(crit, accuracy_df,criterion="RLAS"){
 
   crit_net<- ggraph(as_tbl_graph(crit), layout = 'auto') +
