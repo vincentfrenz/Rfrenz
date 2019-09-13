@@ -54,9 +54,9 @@
 #' @importFrom Rdpack reprompt
 #' @examples
 #'
-rfrenz_acc <- function(slice, criterion="RLAS",accuracy="pearson"){
-  crit <- get_criterion(slice, criterion)
-  acc_df <- get_accuracy(slice, crit,acc = accuracy, criterion_type = criterion)
+rfrenz_acc <- function(dat, criterion="RLAS",accuracy="pearson"){
+  crit <- get_criterion(dat, criterion)
+  acc_df <- get_accuracy(dat, crit,acc = accuracy, criterion_type = criterion)
   all_list <- list(criterion = crit, accuracy = acc_df)
   return(all_list)
 }

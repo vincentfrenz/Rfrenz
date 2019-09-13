@@ -46,11 +46,11 @@ r4 <- matrix(c(0,1,0,1,0,
               1,0,0,1,1,
               0,1,0,0,0,
               0,0,0,1,0),nrow=5, ncol=5)
-r5 <- matrix(c(0,1,0,1,0,
-              0,0,1,0,1,
-              1,0,0,0,1,
-              1,1,0,0,1,
-              1,1,1,1,0),nrow=5, ncol=5)
+r5 <- matrix(c(NA,NA,NA,NA,NA,
+              NA,NA,NA,NA,NA,
+              NA,NA,NA,NA,NA,
+              NA,NA,NA,NA,NA,
+              NA,NA,NA,NA,NA),nrow=5, ncol=5)
 
 list_respondent <- list(r1,r2,r3,r4,r5)
 
@@ -58,11 +58,19 @@ list_respondent <- list(r1,r2,r3,r4,r5)
 
 
 ## The Rfrenz function
+This function generates a criterion (true) network given all the perceptions perceived in a network. The criterion network is then compared to all perceptions in order to determine th similarity between a respondent and thier perception of the network.
+
+#### Arguments 
+`dat` - A list of socio matricies that represent respondents.
+`criterion` - A true (criterion) netwrok of the socio matricies to be computed.
+`accuracy` - An accuracy measure to be computed
 ```{r}
 
 rfrenz_acc(list_respondent, criterion = "ILAS", accuracy="s14")
 
 ```
+#### Values
+The `rfrenz_acc` function returns a list of 2 items. The first is the criterion network. The second is a dataframe containing an accuracy score for each respondent
 ## The Data 
 
 ### Get Data
@@ -75,8 +83,9 @@ get_data(path, save = FALSE, path_out)
 ```
 
 ### Formating Data
+Remove/Replace Missing Slices
 ```{r Formatting Data}
-
+formatting_data(list_respondent, option = "replace")
 ```
 
 ### Mock Data
@@ -140,7 +149,8 @@ This function generates a criterion (true) network given all the perceptions per
 
 #### Usage:
 ```{r Get Criterion}
-get_criterion(x, criterion='RLAS')
+crit <- get_criterion(list_respondent, criterion='RLAS')
+
 ```
 
 #### Values:
@@ -200,7 +210,7 @@ The purpose of this function is to get the accuracy scores for each respondent i
 
 ```{r Get Accuracy}
 
-get_accuracy(dat, criterion, acc = "pearson", criterion_type = NA)
+get_accuracy(list_respondent, crit, acc = "pearson", criterion_type = "RLAS")
 
 ```
 

@@ -233,4 +233,5 @@ get_accuracy <- function(dat, criterion, acc="pearson", criterion_type=NA ){
              })
              return(temp_df)
            })
+  return(temp_df)
 }
