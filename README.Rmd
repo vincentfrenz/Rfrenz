@@ -20,7 +20,7 @@ install.packages('githubinstall')
 ```
 
 The Rfrenz package can then be loaded using the `library` function.
-```{r}
+```{r warning=FALSE}
 library('Rfrenz')
 ```
 
@@ -66,7 +66,7 @@ This function generates a criterion (true) network given all the perceptions per
 `dat` - A list of socio matricies that represent respondents.
 `criterion` - A true (criterion) netwrok of the socio matricies to be computed.
 `accuracy` - An accuracy measure to be computed
-```{r}
+```{r warning=FALSE}
 
 rfrenz_acc(list_respondent, criterion = "ILAS", accuracy="s14")
 
@@ -79,7 +79,8 @@ The `rfrenz_acc` function returns a list of 2 items. The first is the criterion 
 ### Get Data
 
 The get_data function can be used to read in data from a directory containing comma seperated binary values in a text files, where each text file represents a respondent.
-```{ Get Data}
+
+```{r Get Data }
 
 get_data(path, save = FALSE, path_out)
 
@@ -87,7 +88,23 @@ get_data(path, save = FALSE, path_out)
 
 ### Formating Data
 Remove/Replace Missing Slices
-```{r Formatting Data}
+
+This function removes any missing perceptions (slices) from a list of socio-matracies. Three different options exist: removing missing slices, replacing missing slices with central graph or replacing missing values with 0.
+
+#### Missing data is important to consider
+
+Missing data can affect the formation of the actual networks. In order to deal with this, missing perceptions can be set to a blank perception (0), or replaced with an estimate value, or the missing respondents can be omitted. 
+
+"remove"
+This option will omit the missing values completely. Omitting the missing respondents results in effectively sampling the original data [@Borgatti2006]. 
+
+"replace"
+This option will replace the missing values of the obeserver with the central graph consensus of the network.
+
+"zero"
+This option will replace all the missing values of the obeserver with the value 0. This however, can result in inaccurate outcomes [@Krackhardt2002].
+
+```{r Formatting Data , warning=FALSE}
 formatting_data(list_respondent, option = "replace")
 ```
 
@@ -96,7 +113,7 @@ formatting_data(list_respondent, option = "replace")
 There are two main public examples of CSS data that is often used for dementration. These two datasets have been loaded into the R enviroment when the Rfrenz package is called. 
 
 ```{r}
-
+head(Rfrenz::hightech_advice, n=2)
 ```
 
 
@@ -157,7 +174,7 @@ This function generates a criterion (true) network given all the perceptions per
 `criterion` - The criterion network needed to be generated (“RLAS”, “CLAS”, “ILAS”, “ULAS”, “GA”, “GAT”, “GAV”, “SR”, “IR”, “PCA”, “RB”, “BAY”)
 
 
-```{r Get Criterion}
+```{r Get Criterion, warning=FALSE}
 crit <- get_criterion(list_respondent, criterion='RLAS')
 crit
 
@@ -218,7 +235,7 @@ The purpose of this function is to get the accuracy scores for each respondent i
 `acc` - The name of the accuracy measure to be computed. Options: “pearson”, “spearman”, “jaccard”, “kendall”, “s14”, “mrqap”, “gscor”, “CohenK”, “local”, “triadic pearson”, “triadic spearman”, “triadic distance”.
 `criterion_type` - The name of the criterion that has been used.
 
-```{r Get Accuracy}
+```{r Get Accuracy, warning=FALSE}
 
 acc_df<- get_accuracy(list_respondent, crit, acc = "pearson", criterion_type = "RLAS")
 
@@ -241,7 +258,7 @@ This function can be used to quickly plot a summary of the get_crit() and get_ac
 
 `criterion` - default="RLAS". the criterion name of the criterion being past in crit. is used as a titile for the graph.
 
-```{r Rfrenz plot}
+```{r Rfrenz plot, warning=FALSE}
 
 frenz_plot(crit, acc_df,criterion="RLAS")
 

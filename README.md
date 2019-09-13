@@ -14,230 +14,15 @@ Ensure you have the `githubinstall` package installed and the `devtools` package
     install.packages('devtools')
     install.packages('githubinstall')
 
+The Rfrenz package can then be loaded using the `library` function.
+
 ``` r
 library('Rfrenz')
 ```
 
-    ## Warning: replacing previous import 'dplyr::recode' by 'expss::recode' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'dplyr::first' by 'expss::first' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'dplyr::vars' by 'expss::vars' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'dplyr::last' by 'expss::last' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'dplyr::na_if' by 'expss::na_if' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'DescTools::%like%' by 'expss::%like%'
-    ## when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'dplyr::compute' by 'expss::compute'
-    ## when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'dplyr::between' by 'expss::between'
-    ## when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'expss::vars' by 'ggplot2::vars' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'dplyr::combine' by 'gridExtra::combine'
-    ## when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'expss::%u%' by 'igraph::%u%' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'dplyr::union' by 'igraph::union' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'gtools::permute' by 'igraph::permute'
-    ## when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'dplyr::as_data_frame' by
-    ## 'igraph::as_data_frame' when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'dplyr::groups' by 'igraph::groups' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'DescTools::%c%' by 'igraph::%c%' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::%s%' by 'matrixcalc::%s%' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'matrixcalc::%s%' by 'network::%s%' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::add.edges' by
-    ## 'network::add.edges' when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::get.edge.attribute' by
-    ## 'network::get.edge.attribute' when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::add.vertices' by
-    ## 'network::add.vertices' when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::%c%' by 'network::%c%' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::list.vertex.attributes' by
-    ## 'network::list.vertex.attributes' when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::set.edge.attribute' by
-    ## 'network::set.edge.attribute' when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::is.directed' by
-    ## 'network::is.directed' when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::set.vertex.attribute' by
-    ## 'network::set.vertex.attribute' when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::get.vertex.attribute' by
-    ## 'network::get.vertex.attribute' when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'expss::%e%' by 'network::%e%' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::delete.edges' by
-    ## 'network::delete.edges' when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::is.bipartite' by
-    ## 'network::is.bipartite' when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::get.edges' by
-    ## 'network::get.edges' when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::list.edge.attributes' by
-    ## 'network::list.edge.attributes' when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::delete.vertices' by
-    ## 'network::delete.vertices' when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'ggplot2::alpha' by 'psych::alpha' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'DescTools::AUC' by 'psych::AUC' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'DescTools::ICC' by 'psych::ICC' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'DescTools::SD' by 'psych::SD' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'gtools::logit' by 'psych::logit' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'ggplot2::%+%' by 'psych::%+%' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'expss::modify' by 'purrr::modify' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'expss::modify_if' by 'purrr::modify_if'
-    ## when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'expss::keep' by 'purrr::keep' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'expss::transpose' by 'purrr::transpose'
-    ## when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::compose' by 'purrr::compose'
-    ## when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::simplify' by 'purrr::simplify'
-    ## when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'gtools::capture' by 'rebus::capture'
-    ## when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'expss::regex' by 'rebus::regex' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::graph' by 'rebus::graph' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'psych::alpha' by 'rebus::alpha' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'network::%c%' by 'rebus::%c%' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'readr::guess_encoding' by
-    ## 'rvest::guess_encoding' when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'purrr::pluck' by 'rvest::pluck' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'readr::col_factor' by
-    ## 'scales::col_factor' when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'purrr::discard' by 'scales::discard'
-    ## when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'rebus::alpha' by 'scales::alpha' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'psych::rescale' by 'scales::rescale'
-    ## when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::neighborhood' by
-    ## 'sna::neighborhood' when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::hierarchy' by 'sna::hierarchy'
-    ## when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::triad.census' by
-    ## 'sna::triad.census' when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::bonpow' by 'sna::bonpow' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::closeness' by 'sna::closeness'
-    ## when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::evcent' by 'sna::evcent' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::betweenness' by
-    ## 'sna::betweenness' when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::components' by
-    ## 'sna::components' when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::dyad.census' by
-    ## 'sna::dyad.census' when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::is.connected' by
-    ## 'sna::is.connected' when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'expss::gt' by 'sna::gt' when loading
-    ## 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::degree' by 'sna::degree' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'rebus::regex' by 'stringr::regex' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'expss::fixed' by 'stringr::fixed' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'igraph::crossing' by 'tidyr::crossing'
-    ## when loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'expss::nest' by 'tidyr::nest' when
-    ## loading 'Rfrenz'
-
-    ## Warning: replacing previous import 'mipfp::expand' by 'tidyr::expand' when
-    ## loading 'Rfrenz'
-
 ### Generating Test Data
+
+The data generated here is used in the exampls below.
 
 ``` r
 r1 <- matrix(c(0,1,0,1,0,
@@ -272,7 +57,7 @@ list_respondent <- list(r1,r2,r3,r4,r5)
 The Rfrenz function
 -------------------
 
-This function generates a criterion (true) network given all the perceptions perceived in a network. The criterion network is then compared to all perceptions in order to determine th similarity between a respondent and thier perception of the network.
+This function generates a criterion (true) network given all the perceptions perceived in a network. The criterion network is then compared to all perceptions in order to determine the similarity between a respondent and thier perception of the network.
 
 #### Arguments
 
@@ -282,20 +67,7 @@ This function generates a criterion (true) network given all the perceptions per
 rfrenz_acc(list_respondent, criterion = "ILAS", accuracy="s14")
 ```
 
-    ## Warning in formatting_data(dat): You have missing data!
-
-    ## Warning in formatting_data(dat): Missing slice: 5
-
-    ## Warning in formatting_data(dat): Removing missing slices
-
     ## [1] "ILAS Criterion"
-
-    ## Warning in formatting_data(dat): You have missing data!
-
-    ## Warning in formatting_data(dat): Missing slice: 5
-
-    ## Warning in formatting_data(dat): Removing missing slices
-
     ## [1] "S14 Similarity Index"
 
     ## $criterion
@@ -314,7 +86,10 @@ rfrenz_acc(list_respondent, criterion = "ILAS", accuracy="s14")
 
 #### Values
 
-The `rfrenz_acc` function returns a list of 2 items. The first is the criterion network. The second is a dataframe containing an accuracy score for each respondent \#\# The Data
+The `rfrenz_acc` function returns a list of 2 items. The first is the criterion network. The second is a dataframe containing an accuracy score for each respondent
+
+The Data
+--------
 
 ### Get Data
 
@@ -328,15 +103,21 @@ get\_data(path, save = FALSE, path\_out)
 
 Remove/Replace Missing Slices
 
+This function removes any missing perceptions (slices) from a list of socio-matracies. Three different options exist: removing missing slices, replacing missing slices with central graph or replacing missing values with 0.
+
+#### Missing data is important to consider
+
+Missing data can affect the formation of the actual networks. In order to deal with this, missing perceptions can be set to a blank perception (0), or replaced with an estimate value, or the missing respondents can be omitted.
+
+"remove" This option will omit the missing values completely. Omitting the missing respondents results in effectively sampling the original data (Borgatti, Carley, and Krackhardt 2006).
+
+"replace" This option will replace the missing values of the obeserver with the central graph consensus of the network.
+
+"zero" This option will replace all the missing values of the obeserver with the value 0. This however, can result in inaccurate outcomes (Krackhardt and Kilduff 2002).
+
 ``` r
 formatting_data(list_respondent, option = "replace")
 ```
-
-    ## Warning in formatting_data(list_respondent, option = "replace"): You have missing data!
-
-    ## Warning in formatting_data(list_respondent, option = "replace"): Missing slice: 5
-
-    ## Warning in formatting_data(list_respondent, option = "replace"): Replacing missing slices with central graph
 
     ## [[1]]
     ##      [,1] [,2] [,3] [,4] [,5]
@@ -380,42 +161,164 @@ formatting_data(list_respondent, option = "replace")
 
 ### Mock Data
 
+There are two main public examples of CSS data that is often used for dementration. These two datasets have been loaded into the R enviroment when the Rfrenz package is called.
+
+``` r
+head(Rfrenz::hightech_advice, n=2)
+```
+
+    ## [[1]]
+    ##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12] [,13]
+    ##  [1,]    0    1    0    1    0    0    0    1    0     0     0     0     0
+    ##  [2,]    1    0    0    1    0    1    1    1    0     0     0     1     0
+    ##  [3,]    1    1    0    0    0    0    0    0    0     1     1     1     0
+    ##  [4,]    1    1    0    0    0    1    0    1    0     1     1     1     0
+    ##  [5,]    1    1    1    0    0    0    0    0    0     1     1     0     0
+    ##  [6,]    1    1    1    1    1    0    0    1    1     1     1     1     1
+    ##  [7,]    1    1    1    0    1    1    0    1    1     1     1     0     1
+    ##  [8,]    1    0    0    1    0    1    1    0    0     0     1     1     0
+    ##  [9,]    1    1    1    0    1    1    0    0    0     0     1     0     1
+    ## [10,]    0    0    1    0    1    0    0    1    1     0     1     0     1
+    ## [11,]    1    1    1    0    1    0    1    1    1     0     0     0     1
+    ## [12,]    1    1    0    1    0    1    0    1    0     0     0     0     0
+    ## [13,]    1    1    1    0    1    1    0    0    1     1     1     0     0
+    ## [14,]    1    1    1    0    1    1    1    1    1     1     1     1     1
+    ## [15,]    1    1    1    0    1    1    0    0    1     0     1     0     1
+    ## [16,]    1    1    0    1    0    1    0    1    0     1     0     0     0
+    ## [17,]    1    1    1    1    1    0    1    1    1     0     1     1     1
+    ## [18,]    1    1    1    0    1    0    1    1    1     1     1     1     1
+    ## [19,]    1    1    1    0    1    1    0    0    1     1     1     0     1
+    ## [20,]    1    1    1    1    1    1    0    1    1     1     1     1     1
+    ## [21,]    0    1    0    0    0    1    1    1    0     0     0     1     0
+    ##       [,14] [,15] [,16] [,17] [,18] [,19] [,20] [,21]
+    ##  [1,]     0     0     1     0     1     0     0     1
+    ##  [2,]     0     0     1     1     1     0     0     1
+    ##  [3,]     0     0     0     1     1     0     0     0
+    ##  [4,]     0     0     1     0     1     0     0     1
+    ##  [5,]     1     0     1     1     1     1     1     1
+    ##  [6,]     1     1     1     1     1     1     1     1
+    ##  [7,]     1     1     1     1     1     1     1     1
+    ##  [8,]     0     0     1     1     1     0     1     1
+    ##  [9,]     1     1     1     1     1     1     1     0
+    ## [10,]     1     1     1     0     1     1     1     0
+    ## [11,]     1     1     1     0     1     1     1     0
+    ## [12,]     1     1     0     1     1     0     1     1
+    ## [13,]     1     1     1     1     1     1     1     0
+    ## [14,]     0     1     1     1     1     1     1     1
+    ## [15,]     1     0     1     1     1     1     1     1
+    ## [16,]     0     0     0     0     1     0     1     0
+    ## [17,]     1     1     1     0     1     1     1     1
+    ## [18,]     1     1     1     0     0     1     1     1
+    ## [19,]     1     1     1     1     1     0     1     0
+    ## [20,]     1     1     1     1     1     1     0     0
+    ## [21,]     1     0     0     1     1     0     0     0
+    ## 
+    ## [[2]]
+    ##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12] [,13]
+    ##  [1,]    0    1    1    1    0    0    0    0    0     0     1     0     0
+    ##  [2,]    0    0    0    0    0    1    1    0    0     0     0     0     0
+    ##  [3,]    1    1    0    0    0    1    1    0    0     0     0     0     0
+    ##  [4,]    1    1    0    0    0    0    0    1    0     0     0     1     0
+    ##  [5,]    1    1    0    0    0    0    1    0    0     0     0     0     0
+    ##  [6,]    0    1    0    1    0    0    0    0    0     0     1     0     0
+    ##  [7,]    0    1    0    0    0    0    0    0    0     0     0     0     0
+    ##  [8,]    1    1    0    1    0    0    0    0    0     0     0     0     0
+    ##  [9,]    1    1    0    0    0    0    0    0    0     0     0     0     0
+    ## [10,]    0    1    0    0    0    0    0    1    0     0     0     0     0
+    ## [11,]    1    1    0    0    0    0    1    1    0     0     0     0     0
+    ## [12,]    0    1    0    1    0    1    0    0    0     0     0     0     0
+    ## [13,]    1    1    0    0    1    0    1    0    0     0     0     0     0
+    ## [14,]    0    1    0    0    0    0    1    0    0     0     0     0     0
+    ## [15,]    1    1    0    0    1    1    0    0    0     0     0     0     0
+    ## [16,]    1    1    0    1    0    0    0    1    0     0     0     0     0
+    ## [17,]    0    1    0    0    0    1    0    0    0     0     0     0     0
+    ## [18,]    1    1    0    0    0    1    1    0    0     0     1     0     0
+    ## [19,]    1    1    0    0    0    0    0    0    0     0     0     0     0
+    ## [20,]    1    1    0    1    0    1    1    0    0     0     0     0     0
+    ## [21,]    0    1    0    0    0    1    1    0    0     0     0     0     0
+    ##       [,14] [,15] [,16] [,17] [,18] [,19] [,20] [,21]
+    ##  [1,]     0     0     1     0     1     0     0     0
+    ##  [2,]     0     0     0     0     0     0     0     1
+    ##  [3,]     1     0     0     0     0     0     0     1
+    ##  [4,]     0     0     1     0     1     0     0     1
+    ##  [5,]     1     0     1     0     1     0     1     1
+    ##  [6,]     0     0     0     0     0     0     0     1
+    ##  [7,]     0     0     0     0     0     0     0     1
+    ##  [8,]     0     0     0     0     1     0     0     1
+    ##  [9,]     1     0     0     0     1     0     1     0
+    ## [10,]     0     0     1     0     1     0     0     0
+    ## [11,]     0     0     0     0     1     0     0     0
+    ## [12,]     0     0     0     0     0     0     0     1
+    ## [13,]     1     0     0     0     1     1     1     0
+    ## [14,]     0     0     0     0     0     0     0     1
+    ## [15,]     1     0     0     0     1     1     1     1
+    ## [16,]     0     0     0     0     1     0     0     0
+    ## [17,]     0     0     0     0     0     0     0     1
+    ## [18,]     0     0     1     0     0     0     0     1
+    ## [19,]     1     0     0     0     0     0     1     0
+    ## [20,]     1     0     1     0     1     0     0     1
+    ## [21,]     0     0     0     0     0     0     0     0
+
 Criterion
 ---------
 
 Criterion (also called true or actual) networks are representative of the notion of shared or common perceptions of social structures from all observers within a network. Various different algorithms exist to derive these actual networks namely: Local Aggregate Structures (LAS), Consensus Structures and Expert Structures (Krackhardt 1987)(Cornelissen 2019).
 
-Local Aggregate Structures (LAS)
+#### Local Aggregate Structures (LAS)
 
 LAS is suitable in a context to generate which suggests that only the individuals directly involved in the relation determine the existence of the relation.
 
-RLAS: Row-Dominated LAS An RLAS criterion is created by determining whether or not the perceiver observes the relationship to exist, even though the receiver does not always necessarily deem it to exist (Krackhardt 1987). Thus, the sender of the relationship will be assumed as correct. Function used: consensus from the SNA package (Butts 2016).
+##### RLAS: Row-Dominated LAS
 
-CLAS: Column-Dominated LAS. CLAS is created by determining whether or not the receiver of the relation perceives the relation to exist. Thus, the receiver of the relationship will be assumed as correct. Function used: consensus from the SNA package (Butts 2016).
+An RLAS criterion is created by determining whether or not the perceiver observes the relationship to exist, even though the receiver does not always necessarily deem it to exist (Krackhardt 1987). Thus, the sender of the relationship will be assumed as correct. Function used: consensus from the SNA package (Butts 2016).
 
-ILAS: Intersection LAS ILAS criterion networks are created by determining whether or not both respondents perceive the tie to exist. Thus, both respondents have to agree on the relationship in order for it to exist (Krackhardt 1987). Function used: consensus from the SNA package (Butts 2016).
+##### CLAS: Column-Dominated LAS.
 
-ULAS: Union LAS ULAS defines relations to exist if at least one of the respondents involved in the relation perceives it to exist (Krackhardt 1987). Function used: consensus from the SNA package (Butts 2016).
+CLAS is created by determining whether or not the receiver of the relation perceives the relation to exist. Thus, the receiver of the relationship will be assumed as correct. Function used: consensus from the SNA package (Butts 2016).
 
-Consensus Structures
+##### ILAS: Intersection LAS
 
-GA: Global Aggregate Using Global Aggregate to generate actual networks is not so much focused on who perceived a specific relations, but rather how many perceived that relation. This is done by taking the sum of relationships that exists for each observer.
+ILAS criterion networks are created by determining whether or not both respondents perceive the tie to exist. Thus, both respondents have to agree on the relationship in order for it to exist (Krackhardt 1987). Function used: consensus from the SNA package (Butts 2016).
 
-GAT: Global Aggregate with a threshold The threshold is set to measure the proportion of members that perceive a relation between the sender and receiver of the relationship. This corresponds to a “median response” notion of creating an actual network. Function used: consensus from the SNA package (Butts 2016).
+##### ULAS: Union LAS
 
-GAV: Global Aggregate (valued) To gain a clearer understanding of the global perception of a relation, one could make use of proportions rather than showing only the presence or absence of a perceived relation (i.e. the GAT method). Thus, this method shows which percentage of observers perceived the relationship.
+ULAS defines relations to exist if at least one of the respondents involved in the relation perceives it to exist (Krackhardt 1987). Function used: consensus from the SNA package (Butts 2016).
 
-Expert Structures
+#### Consensus Structures
 
-SR: Single Reweight The reweight method takes consensus structure to create an initial criterion network. The reweight method is then applied to give a more accurate representation of the perceptions in the network. This is done is by performing consensus structure reduction on the data again but with different perceivers weighted according to their accuracy in perceiving relations in original criterion network. The single reweight method is when there is only one additional reduction done using the reweighted nodes. Function used: consensus from the SNA package (Butts 2016).
+##### GA: Global Aggregate
 
-IR: Iterative Reweight Similar to Single Reweight except this method applies multiple reductions to weigh perceivers differently in each iteration. This can be useful when there is a disconnect between different perceptions which results in relations which are not accurate or don't exist. IR tries to find the most accurate perceivers in the network in order to give their perceptions of relations more validity when determining the criterion network. Function used: consensus from the SNA package (Butts 2016).
+Using Global Aggregate to generate actual networks is not so much focused on who perceived a specific relations, but rather how many perceived that relation. This is done by taking the sum of relationships that exists for each observer.
 
-RB: Romney Batchelder Similar to Single Reweight method but with an exception to the motivation. Romney Batchelder theory's motivation lies in the measurement of shared beliefs in a group. The criterion is built on the “cultural competency” weighted perceptions. Measuring “cultural competency” of respondents is done by determining the correlation between the responses of each individual and the aggregated responses of the group.
+##### GAT: Global Aggregate with a threshold
 
-PCA: Principal Component Analysis. The PCA method for generating actual networks uses the first component of a network. PCA extracts shared themes among all the respondents within a network (Butts 2016). PCA reduces the dimensions and relationships considered a data set while still maintaining the most important information within it. Function used: consensus from the SNA package (Butts 2016).
+The threshold is set to measure the proportion of members that perceive a relation between the sender and receiver of the relationship. This corresponds to a “median response” notion of creating an actual network. Function used: consensus from the SNA package (Butts 2016).
 
-BAY: Bayesian Network accuracy model method can be used to generate the criterion network given the probability of false positives and false negatives. For more information see Bayesian. Function used: consensus from the SNA package (Butts 2016).
+##### GAV: Global Aggregate (valued)
+
+To gain a clearer understanding of the global perception of a relation, one could make use of proportions rather than showing only the presence or absence of a perceived relation (i.e. the GAT method). Thus, this method shows which percentage of observers perceived the relationship.
+
+#### Expert Structures
+
+##### SR: Single Reweight
+
+The reweight method takes consensus structure to create an initial criterion network. The reweight method is then applied to give a more accurate representation of the perceptions in the network. This is done is by performing consensus structure reduction on the data again but with different perceivers weighted according to their accuracy in perceiving relations in original criterion network. The single reweight method is when there is only one additional reduction done using the reweighted nodes. Function used: consensus from the SNA package (Butts 2016).
+
+##### IR: Iterative Reweight
+
+Similar to Single Reweight except this method applies multiple reductions to weigh perceivers differently in each iteration. This can be useful when there is a disconnect between different perceptions which results in relations which are not accurate or don't exist. IR tries to find the most accurate perceivers in the network in order to give their perceptions of relations more validity when determining the criterion network. Function used: consensus from the SNA package (Butts 2016).
+
+##### RB: Romney Batchelder
+
+Similar to Single Reweight method but with an exception to the motivation. Romney Batchelder theory's motivation lies in the measurement of shared beliefs in a group. The criterion is built on the “cultural competency” weighted perceptions. Measuring “cultural competency” of respondents is done by determining the correlation between the responses of each individual and the aggregated responses of the group.
+
+##### PCA: Principal Component Analysis.
+
+The PCA method for generating actual networks uses the first component of a network. PCA extracts shared themes among all the respondents within a network (Butts 2016). PCA reduces the dimensions and relationships considered a data set while still maintaining the most important information within it. Function used: consensus from the SNA package (Butts 2016).
+
+##### BAY: Bayesian
+
+Network accuracy model method can be used to generate the criterion network given the probability of false positives and false negatives. For more information see Bayesian. Function used: consensus from the SNA package (Butts 2016).
 
 ### Get Criterion
 
@@ -425,19 +328,21 @@ This function generates a criterion (true) network given all the perceptions per
 
 `dat` - A socio-matrix containing all of the perceptions of a network `criterion` - The criterion network needed to be generated (“RLAS”, “CLAS”, “ILAS”, “ULAS”, “GA”, “GAT”, “GAV”, “SR”, “IR”, “PCA”, “RB”, “BAY”)
 
-#### Usage:
-
 ``` r
 crit <- get_criterion(list_respondent, criterion='RLAS')
 ```
 
-    ## Warning in formatting_data(dat): You have missing data!
-
-    ## Warning in formatting_data(dat): Missing slice: 5
-
-    ## Warning in formatting_data(dat): Removing missing slices
-
     ## [1] "RLAS Criterion"
+
+``` r
+crit
+```
+
+    ##      [,1] [,2] [,3] [,4]
+    ## [1,]    0    0    1    0
+    ## [2,]    1    0    0    1
+    ## [3,]    1    1    0    0
+    ## [4,]    1    1    1    0
 
 #### Values:
 
@@ -507,16 +412,14 @@ The purpose of this function is to get the accuracy scores for each respondent i
 `dat` - A list of socio matrices that represent respondents. `criterion` - A sociomatrix that represents the criterion network (i.e., a network that best represents the relations in a network) that is computed from all respondents. `acc` - The name of the accuracy measure to be computed. Options: “pearson”, “spearman”, “jaccard”, “kendall”, “s14”, “mrqap”, “gscor”, “CohenK”, “local”, “triadic pearson”, “triadic spearman”, “triadic distance”. `criterion_type` - The name of the criterion that has been used.
 
 ``` r
-get_accuracy(list_respondent, crit, acc = "pearson", criterion_type = "RLAS")
+acc_df<- get_accuracy(list_respondent, crit, acc = "pearson", criterion_type = "RLAS")
 ```
 
-    ## Warning in formatting_data(dat): You have missing data!
-
-    ## Warning in formatting_data(dat): Missing slice: 5
-
-    ## Warning in formatting_data(dat): Removing missing slices
-
     ## [1] "Pearson Correlation"
+
+``` r
+acc_df
+```
 
     ##   Respondent     Score     acc criterion_type
     ## 1          1 0.8366600 pearson           rlas
@@ -533,6 +436,24 @@ Plotting
 
 ### Rfrenz plot
 
+This function can be used to quickly plot a summary of the get\_crit() and get\_accuracy() functions in one place. \#\#\#\# Arguments `crit` - criterion network returned after get\_criterion() is run. the crit is used to plot a criterion network.
+
+`accuracy_df` - accuracy score dataframe that is return after get\_accruacy() from Rfrenze is run. the accruacy\_df is used to plot a boxplot summarising the data
+
+`criterion` - default="RLAS". the criterion name of the criterion being past in crit. is used as a titile for the graph.
+
+``` r
+frenz_plot(crit, acc_df,criterion="RLAS")
+```
+
+    ## Using `nicely` as default layout
+
+![](README_files/figure-markdown_github/Rfrenz%20plot-1.png)
+
+#### Values
+
+The Plot function returns a network graph of the criterion network that is passed into it and a box and whisker graph showing summary statistics of the data.
+
 Conclusion
 ----------
 
@@ -540,6 +461,8 @@ References
 ==========
 
 Bondonio, Daniele. 1998. “Predictors of accuracy in perceiving informal social networks.” *Social Networks* 20 (4): 301–30. doi:[10.1016/S0378-8733(98)00007-0](https://doi.org/10.1016/S0378-8733(98)00007-0).
+
+Borgatti, Stephen P, Kathleen M Carley, and David Krackhardt. 2006. “On the robustness of centrality measures under conditions of imperfect data.” *Social Networks* 28 (2): 124–36. doi:[10.1016/j.socnet.2005.05.001](https://doi.org/10.1016/j.socnet.2005.05.001).
 
 Butts, Carter T. 2016. “sna: Tools for social network analysis.” <https://cran.r-project.org/package=sna>.
 
@@ -560,6 +483,8 @@ Gower, John C, and P Legendre. 1986. “Metric and Euclidean properties of dissi
 Kendall, Maurice G. 1938. “A new measure of rank correlation.” *Biometrika* 30 (1): 81–93. <https://www.jstor.org/stable/2332226>.
 
 Krackhardt, David. 1987. “Cognitive social structures.” *Social Networks* 9 (2): 109–34. doi:[10.1016/0378-8733(87)90009-8](https://doi.org/10.1016/0378-8733(87)90009-8).
+
+Krackhardt, David, and Martin Kilduff. 2002. “Structure, culture and Simmelian ties in entrepreneurial firms.” *Social Networks* 24 (3): 279–90.
 
 Marineau, Joshua Eric. 2016. “Trust and distrust network accuracy and career advancement in an organization.” *Group & Organization Management* 42 (4): 487–520. doi:[10.1177/1059601115627529](https://doi.org/10.1177/1059601115627529).
 
