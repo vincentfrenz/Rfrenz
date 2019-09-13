@@ -27,4 +27,5 @@ frenz_stats <-function(accuracy_df){
   stats_df$Median[is.infinite(stats_df$Median)] <- NA
 
   frenz_Stats <- merge(accuracy_df, stats_df)
+  return(frenz_Stats)
 }

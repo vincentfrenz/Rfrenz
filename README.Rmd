@@ -80,7 +80,7 @@ The `rfrenz_acc` function returns a list of 2 items. The first is the criterion 
 
 The get_data function can be used to read in data from a directory containing comma seperated binary values in a text files, where each text file represents a respondent.
 
-```{r Get Data }
+```{ Get Data }
 
 get_data(path, save = FALSE, path_out)
 
@@ -176,6 +176,7 @@ This function generates a criterion (true) network given all the perceptions per
 
 
 ```{r Get Criterion, warning=FALSE}
+
 crit <- get_criterion(list_respondent, criterion='RLAS')
 crit
 
@@ -271,6 +272,35 @@ frenz_plot(crit, acc_df,criterion="RLAS")
 #### Values
 
 The Plot function returns a network graph of the criterion network that is passed into it and a box and whisker graph showing summary statistics of the data.
+
+## Basic Statistics on accuracy scores
+
+This function accepts a dataframe from the output of the get_accuracy() function and is based on the Score coloumn. The function returns a dataframe with the basic descriptive statistics added to each observation. These statistics as as follows:
+
+##### Mean
+The Average Accuracy Score
+
+##### Min
+The Least Accurate Score
+
+##### Max
+The Most Accuracy Score
+
+##### Median
+The Median of the Accuracy Scores
+
+#### Arguments
+
+`accuracy_df`	- The accuracy dataframe that results from the get_accuracy() function.
+
+
+```{r warning=FALSE}
+
+stats<-frenz_stats(acc_df)
+
+stats
+```
+
 
 
 ## Conclusion
