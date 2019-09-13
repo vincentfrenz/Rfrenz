@@ -11,7 +11,7 @@ frenz_plot(crit,criterion="Title Here",accuracy_df)
 
 \item{criterion}{Default="Title Here". The title of the criterionnetwork being plotted.}
 
-\item{accuracy_df}{Default = FALSE. If you have an accuracy dataframe from the \link[Rfrenz:sget_accuracy]{get_accuracy()} function you can past it to the parameter here. A boxplot is plotted of for the various accuracy scores.}
+\item{accuracy_df}{Default = FALSE. If you have an accuracy dataframe from the \link[Rfrenz:get_accuracy]{get_accuracy()} function you can past it to the parameter here. A boxplot is plotted of for the various accuracy scores.}
 }
 \description{
 This function can be used to quickly plot a summary of the \link[Rfrenz:get_criterion]{get_criterion()}and \link[Rfrenz:get_accuracy]{get_accuracy()}functions in one place.
