@@ -6,7 +6,7 @@ Author: The cool kids
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: The package works out the accuracy scores for a given criterion network from a list of respondent matrices.
     Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+License: GNU General Public License v3.0
 Imports: dplyr,gtools,BiocManager,DescTools,Kendall,asnipe,binda,cssTools,expss,jaccard,mipfp,network,psych,purrr,qvalue,readr,rebus,rlist,rvest,scales,sna,stringr,tidyr,tidyverse,Rdpack,igraph,intergraph,matrixcalc, ggplot2, ggraph, gridExtra
 Encoding: UTF-8
 LazyData: true
