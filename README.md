@@ -17,7 +17,7 @@ Ensure you have the `githubinstall` package installed and the `devtools` package
 The Rfrenz package can then be loaded using the `library` function.
 
 ``` r
-library('Rfrenz')
+install_github("vincentfrenz/Rfrenz")
 ```
 
 ### Generating Test Data
