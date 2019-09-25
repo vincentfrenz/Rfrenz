@@ -10,7 +10,7 @@ First, install the package `devtools`:
 
     install.packages('devtools')
 
-Next, install the Rfrenz package using the `library` function:
+Next, install the Rfrenz package (developmental version) from GitHub using the `library` function:
 
     ```
     install_github("vincentfrenz/Rfrenz")
