@@ -31,9 +31,9 @@ Usage
 Example
 -------
 
-#### Generating Test Data
+#### Data
 
-The data generated here is used in the examples below.
+The data below represents the cognitive slices of five respondents:
 
 ``` r
 r1 <- matrix(c(0,1,0,1,0,
