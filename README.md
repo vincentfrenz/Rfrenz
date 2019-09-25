@@ -20,7 +20,7 @@ install_github("vincentfrenz/Rfrenz")
 
 ### Generating Test Data
 
-The data generated here is used in the exampls below.
+The data generated here is used in the examples below.
 
 ``` r
 r1 <- matrix(c(0,1,0,1,0,
