@@ -2,7 +2,7 @@ Rfrenz
 ================
 Contributors: Christiaan van Rensburg, Alexander Cawood, Marette Theron (9/13/2019)
 
-The aim of Rfrenz is to simplify the process of computing cognitive social network accuracy of actors by combining various functions from other packages.
+The aim of Rfrenz is to simplify the process of computing cognitive social network accuracy of actors by combining various functions from other packages to provide basic formatting of data (includes addressing missing data), compute the criterion network, calculate the cognitive accuracy scores, and plot the criterion network and accuracy scores.
 
 Install Instructions
 --------------------
