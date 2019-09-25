@@ -31,7 +31,7 @@ Usage
 Example
 -------
 
-### Generating Test Data
+#### Generating Test Data
 
 The data generated here is used in the examples below.
 
