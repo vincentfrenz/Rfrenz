@@ -6,7 +6,7 @@ Rfrenz is an _**experimental**_ package which simplifies the process of computin
 
 Install Instructions
 --------------------
-To install the development version of `Rfrenz` from Github, first ensure that `githubinstall` and `devtools` packages are installed:
+First ensure that `githubinstall` and `devtools` packages are installed:
 
     install.packages('devtools')
     install.packages('githubinstall')
