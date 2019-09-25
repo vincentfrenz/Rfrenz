@@ -7,7 +7,7 @@
 get_criterion(dat, criterion=”RLAS”)
 }
 \arguments{
-\item{dat}{A List of socio-matracies containing all of the perceptions of a network}
+\item{dat}{A list of socio-matrices containing all of the perceptions of a network}
 
 \item{criterion}{The criterion network needed to be generated (“RLAS”, “CLAS”, “ILAS”, “ULAS”, “GA”, “GAT”, “GAV”, “SR”, “IR”, “PCA”, “RB”, “BAY”)}
 }

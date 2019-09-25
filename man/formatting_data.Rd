@@ -2,20 +2,20 @@
 % Please edit documentation in R/formatting_data.R
 \name{formatting_data}
 \alias{formatting_data}
-\title{Remove/Replace Missing (NA) Slices}
+\title{Remove/replace missing slices}
 \usage{
 formatting_data(dat, option = "remove")
 }
 \arguments{
-\item{dat}{A List of socio-matracies containing all of the perceptions of a network}
+\item{dat}{A list of socio-matrices containing all of the perceptions of a network}
 
-\item{option}{Opstion whether to remove or replace missing values ("remove", "replace", "zero")}
+\item{option}{Option whether to remove or replace missing values ("remove", "replace", "zero")}
 }
 \value{
 A list of socio-matracies with the removed/replaced slices within the list
 }
 \description{
-This function removes any missing perceptions (slices) from a list of socio-matracies. Three different options exist:
+This function removes any missing perceptions (slices) from a list of socio-matrices. Three different options exist:
 removing missing slices, replacing missing slices with central graph or replacing missing values with 0.
 }
 \details{

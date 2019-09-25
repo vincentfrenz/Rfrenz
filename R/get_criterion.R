@@ -1,6 +1,6 @@
 #' Get Criterion networks from all perceptions
 #'
-#' @param dat A List of socio-matracies containing all of the perceptions of a network
+#' @param dat A list of socio-matrices containing all of the perceptions of a network
 #' @param criterion The criterion network needed to be generated (“RLAS”, “CLAS”, “ILAS”, “ULAS”, “GA”, “GAT”, “GAV”, “SR”, “IR”, “PCA”, “RB”, “BAY”)
 #'
 #'

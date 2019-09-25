@@ -7,9 +7,9 @@
 get_accuracy(dat, criterion, acc = "pearson", criterion_type = NA)
 }
 \arguments{
-\item{dat}{A list of socio matrices that represent respondents.}
+\item{dat}{A list of socio-matrices that represent respondents.}
 
-\item{criterion}{A sociomatrix that represents the criterion network (i.e., a network that best represents the relations in a network) that is computed from all respondents.}
+\item{criterion}{A socio-matrix that represents the criterion network (i.e., a network that best represents the relations in a network) that is computed from all respondents.}
 
 \item{acc}{The name of the accuracy measure to be computed. Options: “pearson”, “spearman”, “jaccard”, “kendall”, “s14”, “mrqap”, “gscor”, “CohenK”, “local”, “triadic pearson”, “triadic spearman”, “triadic distance”.}
 

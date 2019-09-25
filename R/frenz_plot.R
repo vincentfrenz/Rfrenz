@@ -3,7 +3,7 @@
 #'
 #' @description
 #' This function can be used to quickly plot a summary of the \link[Rfrenz:get_criterion]{get_criterion()}and \link[Rfrenz:get_accuracy]{get_accuracy()}functions in one place.
-#' The function allows you to plot the criterion alone or with an accuracy-score summary in the form of a boxplot. If you want to plot the criterion alone , you only have to pass a criterion-matrix to the function.
+#' The function allows you to plot the criterion alone or with an accuracy-score summary in the form of a boxplot. If you want to plot the criterion alone, you only have to pass a criterion-matrix to the function.
 #'
 #' @usage
 #' frenz_plot(crit,criterion="Title Here",accuracy_df)
@@ -25,7 +25,7 @@
 #' @import gridExtra
 #'
 #'@export
-frenz_plot <- function(crit, criterion="Criterion Title Here", accuracy_df=FALSE){
+frenz_plot <- function(crit, criterion="Title Here", accuracy_df=FALSE){
 
   crit_net<- ggraph(as_tbl_graph(crit), layout = 'auto') +
     geom_edge_fan(arrow = arrow(length = unit(0.08, "inches")),start_cap = circle(4,'mm') , end_cap = circle(4, 'mm')) +

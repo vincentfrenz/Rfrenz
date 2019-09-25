@@ -4,7 +4,7 @@
 \name{Rfrenz}
 \alias{Rfrenz}
 \alias{Rfrenz-package}
-\title{Rfrenz: A package for computing accuracy of respondents in a social network.}
+\title{Rfrenz: Computes cognitive social network accuracy}
 \description{
 The Rfrenz package provides four categories of important functions:
 get_data, get_criterion, get_accuracy and get_all

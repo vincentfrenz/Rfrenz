@@ -1,4 +1,4 @@
-#' Rfrenz: A package for computing accuracy of respondents in a social network.
+#' Rfrenz: Computes cognitive social network accuracy
 #'
 #' The Rfrenz package provides four categories of important functions:
 #' get_data, get_criterion, get_accuracy and get_all

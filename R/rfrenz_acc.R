@@ -1,9 +1,9 @@
 #' Get accuracy from slices
 #'
 #'@description
-#' This function generates a criterion (true) network given all the perceptions perceived in a  network. The criterion network is then compared to all perceptions in order to determine th similarity between a respondent and thier perception of the network.
+#' This function generates a criterion (true) network given all the perceptions perceived in a  network. The criterion network is then compared to all perceptions in order to determine th similarity between a respondent and their perception of the network.
 #'
-#' @param slice A list of socio matricies that represent respondents.
+#' @param slice A list of socio matrices that represent respondents.
 #' @param criterion A true (criterion) netwrok of the socio matricies to be computed.
 #' @param accuracy An accuracy measure to be computed
 #'

@@ -1,6 +1,6 @@
-#' High Tech Managers data on Advice relations
+#' High Tech Managers data on advice relations
 #'
-#' These are data collected from the managers of a high-tec company.
+#' This data collected from the managers of a high-tech company.
 #' The company manufactured high-tech equipment on the west coast of the United States and had just over 100 employees with 21 managers.
 #' Each manager was asked to whom do you go to for advice and who is your friend.
 #'
@@ -8,7 +8,7 @@
 #'
 #' @usage data(hightech_advice)
 #'
-#' @format This data contains a list of Sociomatracies. Each element in the list - a slice - contains a respondent's perception of the network. Each slice exists out of binary data where a '0' corresponds to no relationship obeservered and visa versa.
+#' @format This data contains a list of socio-matrices. Each element in the list - a slice - contains a respondent's perception of the network. Each slice exists out of binary data where a '0' corresponds to no relationship obeservered and visa versa.
 #'
 #' @keywords datasets
 #'

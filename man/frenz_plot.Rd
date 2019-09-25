@@ -15,5 +15,5 @@ frenz_plot(crit,criterion="Title Here",accuracy_df)
 }
 \description{
 This function can be used to quickly plot a summary of the \link[Rfrenz:get_criterion]{get_criterion()}and \link[Rfrenz:get_accuracy]{get_accuracy()}functions in one place.
-The function allows you to plot the criterion alone or with an accuracy-score summary in the form of a boxplot. If you want to plot the criterion alone , you only have to pass a criterion-matrix to the function.
+The function allows you to plot the criterion alone or with an accuracy-score summary in the form of a boxplot. If you want to plot the criterion alone, you only have to pass a criterion-matrix to the function.
 }

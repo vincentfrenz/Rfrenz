@@ -11,13 +11,13 @@ rfrenz_acc(dat, criterion = "RLAS", accuracy = "pearson")
 
 \item{accuracy}{An accuracy measure to be computed}
 
-\item{slice}{A list of socio matricies that represent respondents.}
+\item{slice}{A list of socio matrices that represent respondents.}
 }
 \value{
 Returns a list of 2 items. The first is the criterion network. The second is a dataframe containing an accuracy score for each respondent
 }
 \description{
-This function generates a criterion (true) network given all the perceptions perceived in a  network. The criterion network is then compared to all perceptions in order to determine th similarity between a respondent and thier perception of the network.
+This function generates a criterion (true) network given all the perceptions perceived in a  network. The criterion network is then compared to all perceptions in order to determine th similarity between a respondent and their perception of the network.
 }
 \details{
 Criterion (also called true or actual) networks are representative of the notion of shared or common perceptions of social structures from all observers within a network. Various different algorithms exist to derive these actual networks namely: Local Aggregate Structures (LAS), Consensus Structures and Expert Structures \insertCite{Krackhardt1987a}{Rfrenz}\insertCite{Cornelissen2019}{Rfrenz}.
