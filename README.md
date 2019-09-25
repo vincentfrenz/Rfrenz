@@ -16,6 +16,26 @@ Next, install the Rfrenz package using the `library` function:
     ```
     install_github("vincentfrenz/Rfrenz")
     ```
+ 
+Usage
+-----
+    
+`formatting_data`	Remove/replace missing slices
+
+`frenz_plot`    Quickly plotting a criterion network and optionally the respondents accuracy-scores
+
+`frenz_stats`	Quickly get back basic descriptive statistics on accuracy of respondents
+
+`get_accuracy`	Get accuracy of respondents
+
+`get_criterion`	Computes criterion network from all perceptions
+
+`get_data`	Get Data
+
+`rfrenz_acc`    Get accuracy from slices
+
+Example
+-------
 
 ### Generating Test Data
 
@@ -90,7 +110,9 @@ The Data
 
 ### Get Data
 
-The get\_data function can be used to read in data from a directory containing comma seperated binary values in a text files, where each text file represents a respondent. \`\`\`{ Get Data}
+The get\_data function can be used to read in data from a directory containing comma seperated binary values in a text files, where each text file represents a respondent. 
+
+\`\`\`{ Get Data}
 
 get\_data(path, save = FALSE, path\_out)
 
@@ -98,9 +120,9 @@ get\_data(path, save = FALSE, path\_out)
 
 ### Formating Data
 
-Remove/Replace Missing Slices
+Remove/replace missing slices
 
-This function removes any missing perceptions (slices) from a list of socio-matracies. Three different options exist: removing missing slices, replacing missing slices with central graph or replacing missing values with 0.
+This function removes any missing perceptions (slices) from a list of socio-matrices. Three different options exist: removing missing slices, replacing missing slices with central graph or replacing missing values with 0.
 
 #### Missing data is important to consider
 
@@ -473,7 +495,7 @@ De Nooy, Wouter, Andrej Mrvar, and Vladimir Batagelj. 2016. “Exploratory socia
 
 Dekker, David, David Krackhardt, and Tom A B Snijders. 2003. “Multicollinearity robust QAP for multiple regression.” *1st Annual Conference of the North American Association for Computational Social and Organizational Science*, 22–25. <http://www.casos.cs.cmu.edu/publications/papers/dekker_2003_multicollinearity.pdf>.
 
-Frenz, Vincent. 2019. “Cognitive structural accuracy.” PhD thesis, Stellenbosch University.
+Frenz, Vincent. 2019. “Cognitive structural accuracy.” Master's thesis, Stellenbosch University.
 
 Gower, John C, and P Legendre. 1986. “Metric and Euclidean properties of dissimilarity coefficients.” *Journal of Classification* 3 (1): 5–48. doi:[10.1007/BF01896809](https://doi.org/10.1007/BF01896809).
 
