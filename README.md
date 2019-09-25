@@ -6,15 +6,14 @@ Rfrenz is an _**experimental**_ package which aims to simplify the process of co
 
 Install Instructions
 --------------------
-
-Ensure you have the `githubinstall` package and the `devtools` package installed:
+To install the development version of `RFrenz` from Github, first ensure that `githubinstall` and `devtools` packages are installed:
 
     install.packages('devtools')
     install.packages('githubinstall')
 
-The Rfrenz package can then be loaded using the `library` function:
+Now the Rfrenz package can be installed and loaded using the `library` function:
 
-    ``` r
+    ```{ r }
     install_github("vincentfrenz/Rfrenz")
     ```
 
