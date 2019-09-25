@@ -13,7 +13,7 @@ To install the development version of `Rfrenz` from Github, first ensure that `g
 
 Next, install the Rfrenz package using the `library` function:
 
-    ```{ r }
+    ```
     install_github("vincentfrenz/Rfrenz")
     ```
 
