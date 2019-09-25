@@ -2,7 +2,7 @@ Rfrenz
 ================
 Contributors: Christiaan van Rensburg, Alexander Cawood, Marette Theron (9/13/2019)
 
-Rfrenz aims to simplify the process of computing cognitive social network accuracy by combining various functions from other packages.
+Rfrenz is an *experimental* package which aims to simplify the process of computing cognitive social network accuracy by combining various functions from other packages.
 
 Install Instructions
 --------------------
