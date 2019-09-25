@@ -1,10 +1,6 @@
-Rfrenx
+Rfrenz
 ================
-Christiaan van Rensburg, Alexander Cawood, Marette Theron
-9/13/2019
-
-Introduction
-------------
+Contributors: Christiaan van Rensburg, Alexander Cawood, Marette Theron (9/13/2019)
 
 The aim of Rfrenz is to simplify the process of computing cognitive social network accuracy of actors by combining various functions from other packages.
 
