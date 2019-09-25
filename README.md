@@ -20,8 +20,8 @@ Next, install the Rfrenz package using the `library` function:
 Usage
 -----
 
-| Function | Arguments | Description
-| :------------- |:-------------|:-------------|
+| Function | Description
+| :------------- |:-------------|
 | `formatting_data` | Plots criterion network and the respondents accuracy scores |
 | `frenz_stats` | Quickly get back basic descriptive statistics on accuracy of respondents |
 | `get_accuracy`|Get accuracy of respondents |
