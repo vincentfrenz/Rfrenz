@@ -18,12 +18,12 @@ Usage
 
 | Function | Description
 | :------------- |:-------------|
-| `frenz_stats` | Quickly get back basic descriptive statistics on accuracy of respondents |
+| `frenz_stats` | Computes basic descriptive statistics on accuracy of respondents |
 | `formatting_data` | Plots criterion network and the respondents accuracy scores |
-| `get_accuracy`|Get accuracy of respondents |
+| `get_accuracy`| Computes accuracy of respondents |
 | `get_criterion` | Computes criterion network from all perceptions |
-| `get_data` | Import text data and converts to socio-matrix data |
-| `rfrenz_acc` | Get accuracy from slices |
+| `get_data` | Imports text data and converts to socio-matrix data |
+| `rfrenz_acc` | Computes accuracy from slices |
 
 Example
 -------
