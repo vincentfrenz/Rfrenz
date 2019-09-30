@@ -17,7 +17,7 @@ Usage
 -----
 
 | Function | Description
-| :------------- |:-------------|
+| :---|:---|
 | `frenz_stats` | Computes basic descriptive statistics on accuracy of respondents |
 | `formatting_data` | Plots criterion network and the respondents accuracy scores |
 | `get_accuracy`| Computes accuracy of respondents |
@@ -65,11 +65,11 @@ list_respondent <- list(r1,r2,r3,r4,r5)
 The Rfrenz function
 -------------------
 
-This function generates a criterion (true) network given all the perceptions perceived in a network. The criterion network is then compared to all perceptions in order to determine the similarity between a respondent and thier perception of the network.
+This function generates a criterion network given all the perceptions perceived in a network. The criterion network is then compared to all perceptions in order to determine the similarity between a respondent and their perception of the network.
 
 #### Arguments
 
-`dat` - A list of socio matricies that represent respondents. `criterion` - A true (criterion) netwrok of the socio matricies to be computed. `accuracy` - An accuracy measure to be computed
+`dat` - A list of socio matricies that represent respondents. `criterion` - A criterion netwrok of the socio-matrices to be computed. `accuracy` - An accuracy measure to be computed.
 
 ``` r
 rfrenz_acc(list_respondent, criterion = "ILAS", accuracy="s14")
@@ -94,7 +94,7 @@ rfrenz_acc(list_respondent, criterion = "ILAS", accuracy="s14")
 
 #### Values
 
-The `rfrenz_acc` function returns a list of 2 items. The first is the criterion network. The second is a dataframe containing an accuracy score for each respondent
+The `rfrenz_acc` function returns a list of two items. The first is the criterion network. The second is a dataframe containing an accuracy score for each respondent
 
 The Data
 --------
