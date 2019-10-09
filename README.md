@@ -2,7 +2,7 @@ Rfrenz
 ================
 >_Christiaan van Rensburg, Alexander Cawood, Marette Theron (9/13/2019)_
 
-Rfrenz is an _**experimental**_ package which simplifies the process of computing cognitive social network accuracy by combining various functions from other packages.
+Rfrenz is an _**experimental**_ package which simplifies the process of computing cognitive social network accuracy by combining various functions from other packages. This package provides functions to compute and plot different types of criterion networks and calculate respondents' accuracy.
 
 Install Instructions
 --------------------
