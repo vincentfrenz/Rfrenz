@@ -171,7 +171,7 @@ formatting_data(list_respondent, option = "replace")
 
 ### Mock Data
 
-There are two main public examples of CSS data that is often used for dementration. These two datasets have been loaded into the R enviroment when the Rfrenz package is called.
+There are two main public examples of CSS data that is often used for demonstration. These two datasets have been loaded into the R environment when the Rfrenz package is called.
 
 ``` r
 head(Rfrenz::hightech_advice, n=2)
@@ -272,7 +272,7 @@ head(Rfrenz::hightech_advice, n=2)
 Criterion
 ---------
 
-Criterion (also called true or actual) networks are representative of the notion of shared or common perceptions of social structures from all observers within a network. Various different algorithms exist to derive these actual networks namely: Local Aggregate Structures (LAS), Consensus Structures and Expert Structures (Krackhardt 1987)(Cornelissen 2019).
+Criterion networks are representative of the notion of shared or common perceptions of social structures from all observers within a network. Various different algorithms exist to derive these networks namely: Local Aggregate Structures (LAS), Consensus Structures and Expert Structures (Krackhardt 1987)(Cornelissen 2019).
 
 #### Local Aggregate Structures (LAS)
 
