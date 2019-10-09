@@ -69,7 +69,11 @@ This function generates a criterion network given all the perceptions perceived 
 
 #### Arguments
 
-`dat` - A list of socio matricies that represent respondents. `criterion` - A criterion netwrok of the socio-matrices to be computed. `accuracy` - An accuracy measure to be computed.
+| Argument | Description
+| :---|:---|
+| `dat` | A list of socio-matricies that represent respondents |
+| `criterion` | A criterion netwrok of the socio-matrices to be computed |
+| `accuracy` | An accuracy measure to be computed |
 
 ``` r
 rfrenz_acc(list_respondent, criterion = "ILAS", accuracy="s14")
