@@ -9,10 +9,10 @@ Install Instructions
 To install the [GitHub developmental version](https://github.com/vincentfrenz/Rfrenz "Rfrenz package - GitHub") of `Rfrenz`:
 
     ```
-    install.packages('githubinstall')
+    install.packages('devtools')
     install_github("vincentfrenz/Rfrenz")
     ```
- 
+
 Usage
 -----
 
@@ -88,7 +88,7 @@ rfrenz_acc(list_respondent, criterion = "ILAS", accuracy="s14")
     ## [2,]    1    0    0    1
     ## [3,]    0    1    0    0
     ## [4,]    1    1    0    0
-    ## 
+    ##
     ## $accuracy
     ##   Respondent     Score Accuracy criterion_type
     ## 1          1 0.8703883      s14           ilas
@@ -105,7 +105,7 @@ The Data
 
 ### Get Data
 
-The get\_data function can be used to read in data from a directory containing comma seperated binary values in a text files, where each text file represents a respondent. 
+The get\_data function can be used to read in data from a directory containing comma seperated binary values in a text files, where each text file represents a respondent.
 
 \`\`\`{ Get Data}
 
@@ -140,7 +140,7 @@ formatting_data(list_respondent, option = "replace")
     ## [3,]    0    1    0    0    0
     ## [4,]    1    1    1    0    1
     ## [5,]    0    0    1    1    0
-    ## 
+    ##
     ## [[2]]
     ##      [,1] [,2] [,3] [,4] [,5]
     ## [1,]    0    0    1    1    1
@@ -148,7 +148,7 @@ formatting_data(list_respondent, option = "replace")
     ## [3,]    1    1    0    0    0
     ## [4,]    1    1    1    0    1
     ## [5,]    0    0    0    1    0
-    ## 
+    ##
     ## [[3]]
     ##      [,1] [,2] [,3] [,4] [,5]
     ## [1,]    0    1    1    0    1
@@ -156,7 +156,7 @@ formatting_data(list_respondent, option = "replace")
     ## [3,]    1    1    0    0    0
     ## [4,]    1    1    0    0    1
     ## [5,]    0    0    0    1    0
-    ## 
+    ##
     ## [[4]]
     ##      [,1] [,2] [,3] [,4] [,5]
     ## [1,]    0    1    1    0    0
@@ -164,7 +164,7 @@ formatting_data(list_respondent, option = "replace")
     ## [3,]    0    1    0    0    0
     ## [4,]    1    1    1    0    1
     ## [5,]    0    1    1    0    0
-    ## 
+    ##
     ## [[5]]
     ##      [,1] [,2] [,3] [,4] [,5]
     ## [1,]    0    1    1    0    1
@@ -226,7 +226,7 @@ head(Rfrenz::hightech_advice, n=2)
     ## [19,]     1     1     1     1     1     0     1     0
     ## [20,]     1     1     1     1     1     1     0     0
     ## [21,]     1     0     0     1     1     0     0     0
-    ## 
+    ##
     ## [[2]]
     ##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12] [,13]
     ##  [1,]    0    1    1    1    0    0    0    0    0     0     1     0     0
