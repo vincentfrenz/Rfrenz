@@ -9,7 +9,7 @@ Install Instructions
 To install the [GitHub developmental version](https://github.com/vincentfrenz/Rfrenz "Rfrenz package - GitHub") of `Rfrenz`:
 
     ```
-    install.packages('devtools')
+    install.packages('githubinstall')
     install_github("vincentfrenz/Rfrenz")
     ```
  
