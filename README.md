@@ -1,10 +1,12 @@
-#Rfrenz
+Rfrenz
+================
 
 >_Christiaan van Rensburg, Alexander Cawood, Marette Theron (9/13/2019)_
 
 `Rfrenz` is an _**experimental**_ package which simplifies the process of computing cognitive social network accuracy by combining various functions from other packages. Specifically, `Rfrenz` provides functions to compute and plot different types of criterion networks as well calculate respondents' accuracy using cognitive slice data.
 
-##Install Instructions
+Install Instructions
+--------------------
 
 To install the [GitHub developmental version](https://github.com/vincentfrenz/Rfrenz "Rfrenz package - GitHub") of `Rfrenz`:
 
@@ -13,7 +15,8 @@ To install the [GitHub developmental version](https://github.com/vincentfrenz/Rf
     install_github("vincentfrenz/Rfrenz")
     ```
 
-##Usage
+Usage
+--------------------
 
 | Function | Description
 | :---|:---|
@@ -24,7 +27,8 @@ To install the [GitHub developmental version](https://github.com/vincentfrenz/Rf
 | `get_data` | Imports text data and converts to socio-matrix data |
 | `rfrenz_acc` | Computes accuracy from slices |
 
-##Example
+Example
+--------------------
 
 #### Data
 
@@ -60,7 +64,8 @@ r5 <- matrix(c(NA,NA,NA,NA,NA,
 list_respondent <- list(r1,r2,r3,r4,r5)
 ```
 
-##The Rfrenz function
+The Rfrenz function
+--------------------
 
 This function generates a criterion network given all the perceptions perceived in a network. The criterion network is then compared to all perceptions in order to determine the similarity between a respondent and their perception of the network.
 
