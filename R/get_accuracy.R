@@ -9,6 +9,8 @@
 #' @param acc The name of the accuracy measure to be computed. Options: “pearson”, “spearman”, “jaccard”, “kendall”, “s14”, “mrqap”, “gscor”, “CohenK”, “local”, “triadic pearson”, “triadic spearman”, “triadic distance”.
 #' @param criterion_type The name of the criterion that has been used.
 #'
+#' @return A dataframe of respondents and there accuracy scores.
+#'
 #' @details
 #' The details of each accuracy measure will be explored in this section.
 #' \describe{
@@ -25,36 +27,58 @@
 #'  \item{Triadic (Pearson, Spearman, Distance)}{The triadic accuracy compares the triadic structure of the criterion network and the respondent by means of either a Pearson correlation, Spearman's rank correlation, or Euclidean distance measure. This approach was proposed by \insertCite{Frenz2019;textual}{Rfrenz}  as a means to compare the degree of similarity between the triad census of the actual social network and the triad census of a respondents cognitive slice}
 #' }
 #'
+#' @examples
+#' r1 <- matrix(c(0,1,0,1,0,
+#' 0,0,1,1,0,
+#' 1,0,0,1,1,
+#' 0,1,0,0,1,
+#' 0,1,0,1,0),nrow=5, ncol=5)
+#' r2 <- matrix(c(0,1,1,1,0,
+#'             0,0,1,1,0,
+#'             1,0,0,1,0,
+#'             1,1,0,0,1,
+#'             1,1,0,1,0),nrow=5, ncol=5)
+#' r3 <- matrix(c(0,1,1,1,0,
+#'             1,0,1,1,0,
+#'             1,1,0,0,0,
+#'             0,1,0,0,1,
+#'             1,1,0,1,0),nrow=5, ncol=5)
+#' r4 <- matrix(c(0,1,0,1,0,
+#'             1,0,1,1,1,
+#'             1,0,0,1,1,
+#'             0,1,0,0,0,
+#'             0,0,0,1,0),nrow=5, ncol=5)
+#' r5 <- matrix(c(NA,NA,NA,NA,NA,
+#'             NA,NA,NA,NA,NA,
+#'             NA,NA,NA,NA,NA,
+#'             NA,NA,NA,NA,NA,
+#'             NA,NA,NA,NA,NA),nrow=5, ncol=5)
 #'
-#' @return A dataframe of respondents and there accuracy scores.
+#' list_respondent <- list(r1,r2,r3,r4,r5)
+#'
+#' #The true(criterion) network need to be computed first
+#' crit <- get_criterion(list_respondent, criterion='RLAS')
+#'
+#' #Run the function to get the accuracy, takes in a List of respondents, criterion and the accuracy measure you wish to compute
+#' acc_df<- get_accuracy(list_respondent, crit, acc = "pearson", criterion_type = "RLAS")
+#'
 #' @export
 #'
 #' @import network
-#' @import sna
+#' @importFrom sna gcor
+#' @importFrom sna gscor
+#' @importFrom sna triad.census
 #' @import dplyr
-#' @import scales
-#' @import purrr
-#' @import rlist
-#' @import binda
+#' @importFrom purrr map_df
+#' @importFrom purrr map_dbl
 #' @import expss
 #' @import tidyr
-#' @import qvalue
-#' @import BiocManager
-#' @import jaccard
-#' @import Kendall
-#' @import cssTools
-#' @import DescTools
-#' @import mipfp
-#' @import rvest
-#' @import readr
-#' @import tidyr
-#' @import stringr
-#' @import rebus
-#' @import asnipe
-#' @import psych
+#' @importFrom jaccard jaccard
+#' @importFrom Kendall Kendall
+#' @importFrom cssTools s14
+#' @importFrom asnipe mrqap.dsp
+#' @importFrom psych cohen.kappa
 #' @importFrom Rdpack reprompt
-#'
-#' @examples
 #'
 #' @references
 #' \insertAllCited{}
