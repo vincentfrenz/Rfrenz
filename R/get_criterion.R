@@ -45,8 +45,10 @@
 #'
 #' @return
 #' @export
-#' @import sna
-#' @import binda
+#' @importFrom sna consensus
+#' @importFrom sna as.sociomatrix.sna	
+#' @importFrom sna bbnam
+#' @importFrom binda dichotomize
 #' @importFrom Rdpack reprompt
 #' @examples
 #' @references

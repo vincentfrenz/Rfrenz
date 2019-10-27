@@ -23,12 +23,13 @@
 #' Christiaan van Rensburg, Alex Cawood, Marette Theron
 #'
 #' @export
-#' @import expss
-#' @import rlist
-#' @import network
-#' @import igraph
-#' @import intergraph
-#' @import matrixcalc
+#' @importFrom sna as.sociomatrix.sna
+#' @importFrom expss if_na
+#' @importFrom rlist list.remove
+#' @importFrom network is.network
+#' @importFrom igraph is.igraph
+#' @importFrom intergraph asNetwork
+#' @importFrom matrixcalc is.square.matrix
 #' @examples
 #' @references
 #' \insertAllCited{}
