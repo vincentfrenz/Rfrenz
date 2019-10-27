@@ -31,6 +31,37 @@
 #' @importFrom intergraph asNetwork
 #' @importFrom matrixcalc is.square.matrix
 #' @examples
+#' # Creating list of matrices for exmaple
+#' r1 <- matrix(c(0,1,0,1,0,
+#' 0,0,1,1,0,
+#' 1,0,0,1,1,
+#' 0,1,0,0,1,
+#' 0,1,0,1,0),nrow=5, ncol=5)
+#' r2 <- matrix(c(0,1,1,1,0,
+#'                0,0,1,1,0,
+#'                1,0,0,1,0,
+#'                1,1,0,0,1,
+#'                1,1,0,1,0),nrow=5, ncol=5)
+#' r3 <- matrix(c(0,1,1,1,0,
+#'                1,0,1,1,0,
+#'                1,1,0,0,0,
+#'                0,1,0,0,1,
+#'                1,1,0,1,0),nrow=5, ncol=5)
+#' r4 <- matrix(c(0,1,0,1,0,
+#'                1,0,1,1,1,
+#'                1,0,0,1,1,
+#'                0,1,0,0,0,
+#'                0,0,0,1,0),nrow=5, ncol=5)
+#' r5 <- matrix(c(NA,NA,NA,NA,NA,
+#'                NA,NA,NA,NA,NA,
+#'                NA,NA,NA,NA,NA,
+#'                NA,NA,NA,NA,NA,
+#'                NA,NA,NA,NA,NA),nrow=5, ncol=5)
+#'
+#' list_respondent <- list(r1,r2,r3,r4,r5)    
+#'          
+#' formatted_data <- formatting_data(list_respondent, option = "replace")
+#'
 #' @references
 #' \insertAllCited{}
 #'
