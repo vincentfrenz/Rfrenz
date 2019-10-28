@@ -1,32 +1,40 @@
 ---
 title: "Rfrenz Vignette"
-author: "Christiaan van Rensburg, Alexander Cawood, Marette Theron"
-date: "9/13/2019"
-output: html_notebook
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to Rfrenz}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
 bibliography: inst/REFERENCES.bib
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-Rfrenz
-================
 
->_Christiaan van Rensburg, Alexander Cawood, Marette Theron (9/13/2019)_
+>_Christiaan van Rensburg, Alexander Cawood, Marette Theron (2019)_
 
 `Rfrenz` is an _**experimental**_ package which simplifies the process of computing cognitive social network accuracy by combining various functions from other packages. Specifically, `Rfrenz` provides functions to compute and plot different types of criterion networks as well calculate respondents' accuracy using cognitive slice data.
 
 Usage
 --------------------
+`frenz_stats` - Computes basic descriptive statistics on accuracy of respondents
 
-| Function | Description
-| :---|:---|
-| `frenz_stats` | Computes basic descriptive statistics on accuracy of respondents |
-| `formatting_data` | Plots criterion network and the respondents accuracy scores |
-| `get_accuracy`| Computes accuracy of respondents |
-| `get_criterion` | Computes criterion network from all perceptions |
-| `get_data` | Imports text data and converts to socio-matrix data |
-| `rfrenz_acc` | Computes accuracy from slices |
+`formatting_data` - Plots criterion network and the respondents accuracy scores 
+
+`get_accuracy` - Computes accuracy of respondents 
+
+`get_criterion` - Computes criterion network from all perceptions 
+
+`get_data` - Imports text data and converts to socio-matrix data 
+
+`rfrenz_acc` - Computes accuracy from slices 
+
+
+The Rfrenz package can then be loaded using the `library` function.
+```{r warning=FALSE}
+library('Rfrenz')
+```
 
 ### Generating Test Data
 
@@ -68,11 +76,12 @@ list_respondent <- list(r1,r2,r3,r4,r5)
 This function generates a criterion (true) network given all the perceptions perceived in a network. The criterion network is then compared to all perceptions in order to determine the similarity between a respondent and their perception of the network.
 
 #### Arguments 
-| Argument | Description
-| :---|:---|
-| `dat` | A list of socio-matrices that represent respondents |
-| `criterion` | A criterion netwrok of the socio-matrices to be computed |
-| `accuracy` | An accuracy measure to be computed |
+
+`dat` - A list of socio matricies that represent respondents.
+
+`criterion` - A true (criterion) netwrok of the socio matricies to be computed.
+
+`accuracy` - An accuracy measure to be computed
 
 ```{r warning=FALSE}
 rfrenz_acc(list_respondent, criterion = "ILAS", accuracy="s14")
@@ -158,10 +167,10 @@ slice_6
 This function generates a criterion (true) network given all the perceptions perceived in a network. Several algorithms for determining criterion networks are available to best suit the context of the network.
 
 #### Arguments:
-| Argument | Description
-| :---|:---|
-| `dat` | A socio-matrix containing all of the perceptions of a network |
-| `criterion` | The criterion network needed to be generated (“RLAS”, “CLAS”, “ILAS”, “ULAS”, “GA”, “GAT”, “GAV”, “SR”, “IR”, “PCA”, “RB”, “BAY”) |
+
+`dat` - A socio-matrix containing all of the perceptions of a network
+
+`criterion` - The criterion network needed to be generated (“RLAS”, “CLAS”, “ILAS”, “ULAS”, “GA”, “GAT”, “GAV”, “SR”, “IR”, “PCA”, “RB”, “BAY”)
 
 #### Example:
 ```{r Get Criterion, warning=FALSE}
@@ -244,12 +253,14 @@ Function used: consensus from the SNA package [@Butts2016].
 The purpose of this function is to get the accuracy scores for each respondent in a social network based on their perception of the network. This is done by checking the similarity between their perception and a criterion network (i.e., a network that best represents the relations in a network).
 
 #### Arguments
-| Argument | Description
-| :---|:---|
-| `dat` | A list of socio matrices that represent respondents. |
-| `criterion` | A sociomatrix that represents the criterion network (i.e., a network that best represents the relations in a network) that is computed from all respondents. |
-| `acc` | The name of the accuracy measure to be computed. Options: “pearson”, “spearman”, “jaccard”, “kendall”, “s14”, “mrqap”, “gscor”, “CohenK”, “local”, “triadic pearson”, “triadic spearman”, “triadic distance”. |
-| `criterion_type` | The name of the criterion that has been used. |
+
+`dat` - A list of socio matrices that represent respondents.
+
+`criterion` - A sociomatrix that represents the criterion network (i.e., a network that best represents the relations in a network) that is computed from all respondents.
+
+`acc` - The name of the accuracy measure to be computed. Options: “pearson”, “spearman”, “jaccard”, “kendall”, “s14”, “mrqap”, “gscor”, “CohenK”, “local”, “triadic pearson”, “triadic spearman”, “triadic distance”.
+
+`criterion_type` - The name of the criterion that has been used.
 
 ```{r Get Accuracy, warning=FALSE}
 acc_df<- get_accuracy(list_respondent, crit, acc = "pearson", criterion_type = "RLAS")
@@ -303,14 +314,20 @@ The structural correlation between two or more graphs can be determined using th
 This function can be used to quickly plot a summary of the `get_criterion()` and `get_accuracy()` functions in one place. The function allows you to plot the criterion alone or with an accuracy-score summary in the form of a boxplot. If you want to plot the criterion alone , you only have to pass a criterion-matrix to the function.
 
 #### Arguments
-| Argument | Description
-| :---|:---|
-| `crit` | criterion network returned after get_criterion() is run. the crit is used to plot a criterion network. |
-| `accuracy_df` | Default = FALSE. If you have an accuracy dataframe from the `get_accuracy()` function you can past it to the parameter here. A boxplot is plotted of for the various accuracy scores. |
-| `criterion` | default="RLAS". the criterion name of the criterion being past in crit. is used as a titile for the graph. |
 
-```{r}
+`crit` - criterion network returned after get_criterion() is run. the crit is used to plot a criterion network.
+
+`accuracy_df` -Default = FALSE. If you have an accuracy dataframe from the `get_accuracy()` function you can past it to the parameter here. A boxplot is plotted of for the various accuracy scores.
+
+`criterion` - default="RLAS". the criterion name of the criterion being past in crit. is used as a titile for the graph.
+
+```{r warning=FALSE, eval=FALSE}
 frenz_plot(crit, acc_df,criterion="RLAS")
+```
+
+
+```{r fig.align='center', echo=FALSE, out.width="70%"}
+knitr::include_graphics('./RLAS_example.png')
 ```
 
 #### Values
@@ -341,8 +358,6 @@ The Median of the Accuracy Scores
 stats<-frenz_stats(acc_df)
 stats
 ```
-
-## Conclusion
 
 
 # References

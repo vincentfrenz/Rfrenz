@@ -64,15 +64,11 @@
 #'
 #' @export
 #'
-#' @import network
 #' @importFrom sna gcor
 #' @importFrom sna gscor
 #' @importFrom sna triad.census
-#' @import dplyr
 #' @importFrom purrr map_df
 #' @importFrom purrr map_dbl
-#' @import expss
-#' @import tidyr
 #' @importFrom jaccard jaccard
 #' @importFrom Kendall Kendall
 #' @importFrom cssTools s14
@@ -155,7 +151,7 @@ get_accuracy <- function(dat, criterion, acc="pearson", criterion_type=NA ){
              score<-gscor(dat[[x]],criterion)
              data.frame(Respondent = x,Score = score,Accuracy = acc, criterion_type)
            })
-         },"CohenK"={
+         },"cohenK"={
            print("Cohens Kappa Correlation")
            kap <- list()
            temp_df<-map_df(1:length(dat),function(x){

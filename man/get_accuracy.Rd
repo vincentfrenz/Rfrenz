@@ -38,6 +38,39 @@ The details of each accuracy measure will be explored in this section.
 }
 }
 \examples{
+r1 <- matrix(c(0,1,0,1,0,
+0,0,1,1,0,
+1,0,0,1,1,
+0,1,0,0,1,
+0,1,0,1,0),nrow=5, ncol=5)
+r2 <- matrix(c(0,1,1,1,0,
+            0,0,1,1,0,
+            1,0,0,1,0,
+            1,1,0,0,1,
+            1,1,0,1,0),nrow=5, ncol=5)
+r3 <- matrix(c(0,1,1,1,0,
+            1,0,1,1,0,
+            1,1,0,0,0,
+            0,1,0,0,1,
+            1,1,0,1,0),nrow=5, ncol=5)
+r4 <- matrix(c(0,1,0,1,0,
+            1,0,1,1,1,
+            1,0,0,1,1,
+            0,1,0,0,0,
+            0,0,0,1,0),nrow=5, ncol=5)
+r5 <- matrix(c(NA,NA,NA,NA,NA,
+            NA,NA,NA,NA,NA,
+            NA,NA,NA,NA,NA,
+            NA,NA,NA,NA,NA,
+            NA,NA,NA,NA,NA),nrow=5, ncol=5)
+
+list_respondent <- list(r1,r2,r3,r4,r5)
+
+#The true(criterion) network need to be computed first
+crit <- get_criterion(list_respondent, criterion='RLAS')
+
+#Run the function to get the accuracy, takes in a List of respondents, criterion and the accuracy measure you wish to compute
+acc_df<- get_accuracy(list_respondent, crit, acc = "pearson", criterion_type = "RLAS")
 
 }
 \references{
