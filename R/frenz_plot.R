@@ -12,17 +12,19 @@
 #' @param criterion Default="Title Here". The title of the criterionnetwork being plotted.
 #' @param accuracy_df Default = FALSE. If you have an accuracy dataframe from the \link[Rfrenz:get_accuracy]{get_accuracy()} function you can past it to the parameter here. A boxplot is plotted of for the various accuracy scores.
 #'
-#'
-#' @import igraph
-#' @import dplyr
-#' @import tidyverse
-#' @import tidygraph
-#' @import sna
-#' @import gtools
-#' @import purrr
-#' @import ggplot2
-#' @import ggraph
-#' @import gridExtra
+#' @importFrom ggraph geom_edge_fan
+#' @importFrom ggraph geom_node_point
+#' @importFrom ggraph geom_node_text
+#' @importFrom ggraph theme_graph
+#' @importFrom ggraph geometry
+#' @importFrom ggplot2 ggtitle
+#' @importFrom ggplot2 labs
+#' @importFrom ggplot2 geom_boxplot
+#' @importFrom ggplot2 coord_flip
+#' @importFrom ggplot2 theme_minimal
+#' @importFrom ggplot2 aes
+#' @importFrom gridExtra grid.arrange
+#' @importFrom tidygraph as_tbl_graph
 #'
 #'@export
 frenz_plot <- function(crit, criterion="Title Here", accuracy_df=FALSE){

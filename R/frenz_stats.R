@@ -9,7 +9,7 @@
 #'}
 #'
 #' @param accuracy_df The accuracy dataframe that results from the \link[Rfrenz:get_accuracy]{get_accuracy()} function.
-#' @import dplyr
+#' @importFrom dplyr summarise
 #' @return
 #' @export
 frenz_stats <-function(accuracy_df){

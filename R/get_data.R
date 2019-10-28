@@ -7,7 +7,7 @@
 #' @param path_out The Path to a driectory where you want to store the `.rds` .
 #'
 #' @import sna
-#' @import gtools
+#' @import gtools mixedsort
 #' @examples get_data("Documents/folder/", save=TRUE , "Documents/folder/data_out/")
 #'
 #' @export
