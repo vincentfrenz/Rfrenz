@@ -2,6 +2,7 @@ Rfrenz
 ================
 
 ![](./Rfrenz.png =100x100)
+<img src="./Rfrenz.png" width="200px" />
 
 >_Christiaan van Rensburg, Alexander Cawood, Marette Theron (9/13/2019)_
 
