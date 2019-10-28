@@ -1,7 +1,7 @@
 Rfrenz
 ================
 
-<img src="./Rfrenz.png" width="200px" style="align-content:center;" />
+<img src="./Rfrenz.png" width="200px" style="align-text:center;" />
 
 >_Christiaan van Rensburg, Alexander Cawood, Marette Theron (9/13/2019)_
 
