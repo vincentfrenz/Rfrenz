@@ -12,6 +12,18 @@
 #' @param criterion Default="Title Here". The title of the criterionnetwork being plotted.
 #' @param accuracy_df Default = FALSE. If you have an accuracy dataframe from the \link[Rfrenz:get_accuracy]{get_accuracy()} function you can past it to the parameter here. A boxplot is plotted of for the various accuracy scores.
 #'
+#'@examples
+#' #Readin data
+#' dat <- Rfrenz::hightech_advice
+#' 
+#' #Complete Criterion and Accuracy functions
+#' crit <- get_criterion(dat,"CLAS")
+#' accr <- get_accuracy(dat, crit, acc = "pearson", criterion_type = "CLAS")
+#' 
+#' #Plug results into Plot function
+#' frenz_plot(crit, criterion="Plot CLAS with Pearson Accuracy", accuracy_df= accr)
+#'
+#'
 #' @importFrom ggraph geom_edge_fan
 #' @importFrom ggraph geom_node_point
 #' @importFrom ggraph geom_node_text

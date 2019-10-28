@@ -9,6 +9,14 @@
 #'}
 #'
 #' @param accuracy_df The accuracy dataframe that results from the \link[Rfrenz:get_accuracy]{get_accuracy()} function.
+#' @example 
+#' dat <- Rfrenz::hightech_advice
+#' #Complete Criterion and Accuracy functions
+#' crit <- get_criterion(dat,"CLAS")
+#' accr <- get_accuracy(dat, crit, acc = "pearson", criterion_type = "CLAS")
+#' 
+#' frenz_stats(accr)
+#' 
 #' @importFrom dplyr summarise
 #' @return
 #' @export
