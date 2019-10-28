@@ -1,7 +1,7 @@
 Rfrenz
 ================
 
-![]("Rfrenz.png")
+![]("./Rfrenz.png")
 
 >_Christiaan van Rensburg, Alexander Cawood, Marette Theron (9/13/2019)_
 
