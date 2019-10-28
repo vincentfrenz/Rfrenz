@@ -1,8 +1,8 @@
-#' High Tech Managers data on advice relations
+#' High Tech Managers data on advice relations.
 #'
 #' This data collected from the managers of a high-tech company.
 #' The company manufactured high-tech equipment on the west coast of the United States and had just over 100 employees with 21 managers.
-#' Each manager was asked to whom they went to for advice and who they thought the other managers went to for advice. This was recorded and a dataset was made.
+#' Each manager was asked to whom they go to for advice aswell as who they thought the other managers went to for advice. This was recorded and a dataset was made.
 #'
 #' @docType data
 #'
@@ -18,4 +18,4 @@
 #' data(hightech_advice)
 #' slice_6 <- hightech_advice[[6]]
 #' slice_6
-NULL
+"hightech_advice"
