@@ -6,8 +6,7 @@
 #' @param save Default FALSE. If parameter is set to equal TRUE, the matrix will be saved into an `.rds`. If set to TRUE you need to pass a path to "path_out" where your `.rds` will be stored.
 #' @param path_out The Path to a driectory where you want to store the `.rds` .
 #'
-#' @import sna
-#' @import gtools mixedsort
+#' @importFrom gtools mixedsort
 #' @examples get_data("Documents/folder/", save=TRUE , "Documents/folder/data_out/")
 #'
 #' @export
