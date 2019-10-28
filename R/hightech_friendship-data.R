@@ -1,5 +1,6 @@
 #' High Tech Managers data on friendship relations
 #'
+#' @description
 #' This data collected from the managers of a high-tech company.
 #' The company manufactured high-tech equipment on the west coast of the United States and had just over 100 employees with 21 managers.
 #' Each manager was asked with whom they are friends aswell as who they thought of the other managers were friends with. This was recorded and a dataset was made.
@@ -18,4 +19,4 @@
 #' data <- (Rfrenz::hightech_friendship) 
 #' slice_6 <- data[[6]]
 #' slice_6
-NULL
+"hightech_friendship"

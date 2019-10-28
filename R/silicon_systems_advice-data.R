@@ -1,5 +1,6 @@
 #' Silicon Systems data on advice relations
 #' 
+#' @description 
 #' Krackhardt asked employees at Silicon Systems, a high-tech firm that was undergoing a union certification campaign, to whom they go to for advice and who they thought other employees went to for advice. 
 #' These relationships provide insight into the firm's embedded social structure.
 #' Silicon Systems has a list of 36 respondent's perceptions.
@@ -15,7 +16,7 @@
 #' @references Krackhardt D. (1987). Cognitive social structures. Social Networks, 9, 104-134.
 #'
 #' @examples
-#' data <- Rfrenz::silsys_advice
+#' data <- (Rfrenz::silsys_advice)
 #' slice_6 <- data[[6]]
 #' slice_6
-NULL
+"silsys_advice"
