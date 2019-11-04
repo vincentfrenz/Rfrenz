@@ -46,6 +46,39 @@ LAS is suitable in a context to generate which suggests that only the individual
 \item{BAY: Bayesian}{Network accuracy model method can be used to generate the criterion network given the probability of false positives and false negatives. For more information see Bayesian. Function used: \link[sna:bbnam]{consensus}  from the SNA package \insertCite{Butts2016}{Rfrenz}.}
 }
 }
+\examples{
+# Creating list of matrices for exmaple
+r1 <- matrix(c(0,1,0,1,0,
+0,0,1,1,0,
+1,0,0,1,1,
+0,1,0,0,1,
+0,1,0,1,0),nrow=5, ncol=5)
+r2 <- matrix(c(0,1,1,1,0,
+               0,0,1,1,0,
+               1,0,0,1,0,
+               1,1,0,0,1,
+               1,1,0,1,0),nrow=5, ncol=5)
+r3 <- matrix(c(0,1,1,1,0,
+               1,0,1,1,0,
+               1,1,0,0,0,
+               0,1,0,0,1,
+               1,1,0,1,0),nrow=5, ncol=5)
+r4 <- matrix(c(0,1,0,1,0,
+               1,0,1,1,1,
+               1,0,0,1,1,
+               0,1,0,0,0,
+               0,0,0,1,0),nrow=5, ncol=5)
+r5 <- matrix(c(NA,NA,NA,NA,NA,
+               NA,NA,NA,NA,NA,
+               NA,NA,NA,NA,NA,
+               NA,NA,NA,NA,NA,
+               NA,NA,NA,NA,NA),nrow=5, ncol=5)
+
+list_respondent <- list(r1,r2,r3,r4,r5)    
+         
+crit <- get_criterion(list_respondents, criterion='RLAS')
+
+}
 \references{
 \insertAllCited{}
 }

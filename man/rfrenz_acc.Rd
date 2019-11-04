@@ -63,5 +63,34 @@ LAS is suitable in a context to generate which suggests that only the individual
 }
 }
 \examples{
+r1 <- matrix(c(0,1,0,1,0,
+0,0,1,1,0,
+1,0,0,1,1,
+0,1,0,0,1,
+0,1,0,1,0),nrow=5, ncol=5)
+r2 <- matrix(c(0,1,1,1,0,
+            0,0,1,1,0,
+            1,0,0,1,0,
+            1,1,0,0,1,
+            1,1,0,1,0),nrow=5, ncol=5)
+r3 <- matrix(c(0,1,1,1,0,
+            1,0,1,1,0,
+            1,1,0,0,0,
+            0,1,0,0,1,
+            1,1,0,1,0),nrow=5, ncol=5)
+r4 <- matrix(c(0,1,0,1,0,
+            1,0,1,1,1,
+            1,0,0,1,1,
+            0,1,0,0,0,
+            0,0,0,1,0),nrow=5, ncol=5)
+r5 <- matrix(c(NA,NA,NA,NA,NA,
+            NA,NA,NA,NA,NA,
+            NA,NA,NA,NA,NA,
+            NA,NA,NA,NA,NA,
+            NA,NA,NA,NA,NA),nrow=5, ncol=5)
+
+list_respondent <- list(r1,r2,r3,r4,r5)
+
+rfrenz_acc<- rfrenz_acc(list_respondent, acc = "pearson", criterion_type = "RLAS")
 
 }

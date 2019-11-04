@@ -15,28 +15,19 @@
 #'@examples
 #' #Readin data
 #' dat <- Rfrenz::hightech_advice
-#' 
+#'
 #' #Complete Criterion and Accuracy functions
 #' crit <- get_criterion(dat,"CLAS")
 #' accr <- get_accuracy(dat, crit, acc = "pearson", criterion_type = "CLAS")
-#' 
+#'
 #' #Plug results into Plot function
 #' frenz_plot(crit, criterion="Plot CLAS with Pearson Accuracy", accuracy_df= accr)
 #'
 #'
-#' @importFrom ggraph geom_edge_fan
-#' @importFrom ggraph geom_node_point
-#' @importFrom ggraph geom_node_text
-#' @importFrom ggraph theme_graph
-#' @importFrom ggraph geometry
-#' @importFrom ggplot2 ggtitle
-#' @importFrom ggplot2 labs
-#' @importFrom ggplot2 geom_boxplot
-#' @importFrom ggplot2 coord_flip
-#' @importFrom ggplot2 theme_minimal
-#' @importFrom ggplot2 aes
+#' @import ggraph
+#' @import ggplot2
+#' @import tidygraph
 #' @importFrom gridExtra grid.arrange
-#' @importFrom tidygraph as_tbl_graph
 #'
 #'@export
 frenz_plot <- function(crit, criterion="Title Here", accuracy_df=FALSE){
