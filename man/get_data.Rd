@@ -4,7 +4,7 @@
 \alias{get_data}
 \title{Get Data}
 \usage{
-get_data(path, save = FALSE, path_out)
+get_data(path, save = FALSE, path_out, seperator = ",")
 }
 \arguments{
 \item{path}{Path to the directory where txt files are stored.}
@@ -12,6 +12,8 @@ get_data(path, save = FALSE, path_out)
 \item{save}{Default FALSE. If parameter is set to equal TRUE, the matrix will be saved into an `.rds`. If set to TRUE you need to pass a path to "path_out" where your `.rds` will be stored.}
 
 \item{path_out}{The Path to a driectory where you want to store the `.rds` .}
+
+\item{seperator}{The separator to be used to distinguish between values}
 }
 \description{
 Import matrix stored as txt into R and convert to Martix

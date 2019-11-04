@@ -58,14 +58,20 @@
 #'                NA,NA,NA,NA,NA,
 #'                NA,NA,NA,NA,NA),nrow=5, ncol=5)
 #'
-#' list_respondent <- list(r1,r2,r3,r4,r5)    
-#'          
+#' list_respondent <- list(r1,r2,r3,r4,r5)
+#'
 #' formatted_data <- formatting_data(list_respondent, option = "replace")
 #'
 #' @references
 #' \insertAllCited{}
 #'
 formatting_data <- function(dat, option="remove") {
+  len<-length(dat)
+  for(x in 1:len){
+    rownames(dat[[x]])<-as.character(1:len)
+    colnames(dat[[x]])<-as.character(1:len)
+  }
+
   if(is.igraph(dat[[1]])) {
     warning('Package can not remove missing values from IGRPAH/TidyGraph data! (Data could be skewed) \n')
     dat <- lapply(dat, asNetwork)
@@ -103,5 +109,6 @@ formatting_data <- function(dat, option="remove") {
             }
     )
   }
+
   return(dat)
 }

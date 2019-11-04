@@ -56,8 +56,8 @@ r5 <- matrix(c(NA,NA,NA,NA,NA,
                NA,NA,NA,NA,NA,
                NA,NA,NA,NA,NA),nrow=5, ncol=5)
 
-list_respondent <- list(r1,r2,r3,r4,r5)    
-         
+list_respondent <- list(r1,r2,r3,r4,r5)
+
 formatted_data <- formatting_data(list_respondent, option = "replace")
 
 }

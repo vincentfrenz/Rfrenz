@@ -35,7 +35,7 @@ frenz_plot <- function(crit, criterion="Title Here", accuracy_df=FALSE){
   crit_net<- ggraph(as_tbl_graph(crit), layout = 'auto') +
     geom_edge_fan(arrow = arrow(length = unit(0.08, "inches")),start_cap = circle(4,'mm') , end_cap = circle(4, 'mm')) +
     geom_node_point(size = 8, colour = '#84D8E0') +
-    geom_node_text(aes(label = 1:length(x)),colour = 'black', vjust = 0.4)+
+    geom_node_text(aes(label = name),colour = 'black', vjust = 0.4)+
     ggtitle(criterion)+
     theme_graph()
 
