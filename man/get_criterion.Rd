@@ -10,6 +10,8 @@ get_criterion(dat, criterion=”RLAS”)
 \item{dat}{A list of socio-matrices containing all of the perceptions of a network}
 
 \item{criterion}{The criterion network needed to be generated (“RLAS”, “CLAS”, “ILAS”, “ULAS”, “GA”, “GAT”, “GAV”, “SR”, “IR”, “PCA”, “RB”, “BAY”)}
+
+\item{option}{An option that determines how missing values will be dealt with. options: "zero", "remove", "replace"}
 }
 \value{
 A socio-matrix representing the Criterion ('true') Network structure

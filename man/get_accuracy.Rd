@@ -14,6 +14,8 @@ get_accuracy(dat, criterion, acc = "pearson", criterion_type = NA)
 \item{acc}{The name of the accuracy measure to be computed. Options: “pearson”, “spearman”, “jaccard”, “kendall”, “s14”, “mrqap”, “gscor”, “CohenK”, “local”, “triadic pearson”, “triadic spearman”, “triadic distance”.}
 
 \item{criterion_type}{The name of the criterion that has been used.}
+
+\item{option}{An option that determines how missing values will be dealt with. options: "zero", "remove", "replace"}
 }
 \value{
 A dataframe of respondents and there accuracy scores.

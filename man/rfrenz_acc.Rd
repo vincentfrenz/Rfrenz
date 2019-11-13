@@ -4,12 +4,15 @@
 \alias{rfrenz_acc}
 \title{Get accuracy from slices}
 \usage{
-rfrenz_acc(dat, criterion = "RLAS", accuracy = "pearson")
+rfrenz_acc(dat, criterion = "RLAS", accuracy = "pearson",
+  option = "remove")
 }
 \arguments{
 \item{criterion}{A true (criterion) netwrok of the socio matricies to be computed.}
 
 \item{accuracy}{An accuracy measure to be computed}
+
+\item{option}{An option that determines how missing values will be dealt with. options: "zero", "remove", "replace"}
 
 \item{slice}{A list of socio matrices that represent respondents.}
 }

@@ -8,6 +8,7 @@
 #' @param criterion A socio-matrix that represents the criterion network (i.e., a network that best represents the relations in a network) that is computed from all respondents.
 #' @param acc The name of the accuracy measure to be computed. Options: “pearson”, “spearman”, “jaccard”, “kendall”, “s14”, “mrqap”, “gscor”, “CohenK”, “local”, “triadic pearson”, “triadic spearman”, “triadic distance”.
 #' @param criterion_type The name of the criterion that has been used.
+#' @param option An option that determines how missing values will be dealt with. options: "zero", "remove", "replace"
 #'
 #' @return A dataframe of respondents and there accuracy scores.
 #'
@@ -78,11 +79,11 @@
 #'
 #' @references
 #' \insertAllCited{}
-get_accuracy <- function(dat, criterion, acc="pearson", criterion_type=NA ){
+get_accuracy <- function(dat, criterion, acc="pearson", criterion_type=NA, option="remove" ){
   if(!is.na(criterion_type)){
     criterion_type <- tolower(criterion_type)
   }
-  dat<-formatting_data(dat)
+  dat<-formatting_data(dat, option=option)
   temp_df<-data.frame()
   switch(acc,
          "pearson"={

@@ -6,6 +6,7 @@
 #' @param slice A list of socio matrices that represent respondents.
 #' @param criterion A true (criterion) netwrok of the socio matricies to be computed.
 #' @param accuracy An accuracy measure to be computed
+#' @param option An option that determines how missing values will be dealt with. options: "zero", "remove", "replace"
 #'
 #'@details
 #' Criterion (also called true or actual) networks are representative of the notion of shared or common perceptions of social structures from all observers within a network. Various different algorithms exist to derive these actual networks namely: Local Aggregate Structures (LAS), Consensus Structures and Expert Structures \insertCite{Krackhardt1987a}{Rfrenz}\insertCite{Cornelissen2019}{Rfrenz}.
@@ -83,9 +84,9 @@
 #'
 #' rfrenz_acc<- rfrenz_acc(list_respondent, acc = "pearson", criterion_type = "RLAS")
 #'
-rfrenz_acc <- function(dat, criterion="RLAS",accuracy="pearson"){
-  crit <- get_criterion(dat, criterion)
-  acc_df <- get_accuracy(dat, crit,acc = accuracy, criterion_type = criterion)
+rfrenz_acc <- function(dat, criterion="RLAS",accuracy="pearson", option="remove"){
+  crit <- get_criterion(dat, criterion, option=option)
+  acc_df <- get_accuracy(dat, crit,acc = accuracy, criterion_type = criterion, option=option)
   all_list <- list(criterion = crit, accuracy = acc_df)
   return(all_list)
 }

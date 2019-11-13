@@ -2,7 +2,7 @@
 #'
 #' @param dat A list of socio-matrices containing all of the perceptions of a network
 #' @param criterion The criterion network needed to be generated (“RLAS”, “CLAS”, “ILAS”, “ULAS”, “GA”, “GAT”, “GAV”, “SR”, “IR”, “PCA”, “RB”, “BAY”)
-#'
+#' @param option An option that determines how missing values will be dealt with. options: "zero", "remove", "replace"
 #'
 #' @description
 #' This function generates a criterion (true) network given all the perceptions perceived in a  network. Several algorithms for determining criterion networks are available to best suit the context of the network.
@@ -85,10 +85,10 @@
 #' @references
 #' \insertAllCited{}
 #'
-get_criterion <- function(dat, criterion="RLAS"){
+get_criterion <- function(dat, criterion="RLAS", option="remove"){
   criterion_upper <- toupper(criterion)
   len<-length(dat)
-  dat <- formatting_data(dat)
+  dat <- formatting_data(dat, option=option)
   names <- colnames(dat[[1]])
   crit<-NULL
 
