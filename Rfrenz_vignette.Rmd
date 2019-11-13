@@ -109,24 +109,32 @@ This function removes any missing perceptions (slices) from a list of socio-matr
 
 #### Missing data is important to consider
 
-Missing data can affect the formation of the actual networks. In order to deal with this, missing perceptions can be set to a blank perception (0), or replaced with an estimate value, or the missing respondents can be omitted. 
+Missing data can affect the formation of the actual networks. In order to deal with this, missing perceptions can be set to a blank perception (0), or replaced with an estimate value, or the missing respondents can be omitted.
 
-"remove"
-This option will omit the missing values completely. Omitting the missing respondents results in effectively sampling the original data [@Borgatti2006]. 
+#### Arguments
 
-"replace"
-This option will replace the missing values of the obeserver with the central graph consensus of the network.
+`dat` -  A list of socio-matrices containing all of the perceptions of a network
+`option` -  Option whether to remove or replace missing values ("remove", "replace", "zero")
 
-"zero"
-This option will replace all the missing values of the obeserver with the value 0 [@Krackhardt2002].
+##### Option Paramater
+`"remove"` - This option will omit the missing values completely. Omitting the missing respondents results in effectively sampling the original data [@Borgatti2006]. 
 
+`"replace"` - This option will replace the missing values of the obeserver with the central graph consensus of the network.
+
+`"zero"` - This option will replace all the missing values of the obeserver with the value 0 [@Krackhardt2002].
+
+#### Values
+
+A list of socio-matracies with the removed/replaced slices within the list
+
+#### Example
 ```{r Formatting Data , warning=FALSE}
 formatting_data(list_respondent, option = "replace")
 ```
 
 ### Mock Data
 
-There are two main public examples of CSS data that is often used for dementration. These two datasets have been loaded into the R enviroment when the Rfrenz package is called. 
+There are two main public examples of CSS data that is often used for demonstration. These two datasets have been loaded into the R enviroment when the Rfrenz package is called. 
 
 #### High Tech Managers data on advice and friendship relations.
 
@@ -193,7 +201,7 @@ Criterion (also called true or actual) networks are representative of the notion
 LAS is suitable in a context to generate a criterion which suggests that only the individuals directly involved in the relation determine the existence of the relation.
 
 ###### **RLAS: Row-Dominated LAS**
-An RLAS criterion is created by determining whether or not the perceiver observe the relationship to exist, even though the receiver does not always necessarily deem it to exist [@Krackhardt1987a]. Thus, the sender of the relationship will determine the correctness of the relationship. 
+An RLAS criterion is created by determining whether or not the perceiver observes the relationship to exist, even though the receiver does not always necessarily deem it to exist [@Krackhardt1987a]. Thus, the sender of the relationship will determine the correctness of the relationship. 
 
 Function used: consensus from the SNA package [@Butts2016].
 
