@@ -12,7 +12,7 @@ To install the [GitHub developmental version](https://github.com/vincentfrenz/Rf
 
     ```
     install.packages('devtools')
-    install_github("vincentfrenz/Rfrenz")
+    devtools::install_github("vincentfrenz/Rfrenz")
     ```
 
 Usage
